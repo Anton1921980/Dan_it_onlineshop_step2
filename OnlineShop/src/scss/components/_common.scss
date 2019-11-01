@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v9-latin-regular.eot');
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+  url('../fonts/poppins-v9-latin-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/poppins-v9-latin-regular.woff2') format('woff2'),
+  url('../fonts/poppins-v9-latin-regular.woff') format('woff'),
+  url('../fonts/poppins-v9-latin-regular.ttf') format('truetype'),
+  url('../fonts/poppins-v9-latin-regular.svg#Poppins') format('svg');
+}
+
+.main-container{
+  background-color: white;
+  @include flex-vertical();
+  font-family: $font-family;
+}
+.container{
+  background-color: transparent;
+  @include flex-layout(space-between);
+}
+
+a{
+  cursor: pointer;
+}

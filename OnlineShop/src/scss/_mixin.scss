@@ -1,0 +1,21 @@
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-layout($main: center, $axis: center){
+  @include flex;
+  justify-content: $main;
+  align-items: $axis;
+}
+
+@mixin flex-vertical($main: center, $axis: center){
+  @include flex;
+  flex-direction: column;
+  justify-content: $main;
+  align-items: $axis;
+}
+
+@mixin padding($top: 20px, $right: 0, $bottom: 20px, $left: 0){
+  padding: $top $right $bottom $left;
+}
