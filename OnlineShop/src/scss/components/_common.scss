@@ -11,15 +11,16 @@
   url('../fonts/poppins-v9-latin-regular.svg#Poppins') format('svg');
 }
 
-.main-container{
-  background-color: white;
-  @include flex-vertical();
-  font-family: $font-family;
-}
-.container{
-  background-color: transparent;
-  @include flex-layout(space-between);
-}
+// .main-container{
+//   background-color: white;
+//   @include flex-vertical();
+//   font-family: $font-family;
+// }
+// .container{
+//   width:100%;
+//   background-color: transparent;
+//   @include flex-layout(space-between);
+// }
 
 a{
   cursor: pointer;

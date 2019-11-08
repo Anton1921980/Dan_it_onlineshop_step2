@@ -16,7 +16,7 @@ const rigger = require("gulp-rigger");
 const paths = {
     img:["./src/images/**"],
     css:["./src/scss/**/*.scss"],
-    html:["./src/templates/index.html"],
+    html:["./src/templates/*.html"],
     script:["./src/js/**.js"],
     dist:["./dist"],
     distCSS:["./dist/css"],
@@ -102,6 +102,7 @@ gulp.task("watch_dev", function () {
     gulp.watch(paths.css, gulp.series('styles_dev'))
     gulp.watch(paths.script, gulp.series("scripts_dev"))
     gulp.watch("./*.html").on("change", browserSync.reload)
+    gulp.watch("dist/css/*.css").on("change", browserSync.reload)
 });
 
 gulp.task("watch", function () {
