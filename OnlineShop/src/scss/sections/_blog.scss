@@ -1,0 +1,138 @@
+.blog{
+  &-btn{
+    color: white;
+    width: 165px;
+    height: 45px;
+    background-color: #2a2a2a;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0;
+    padding-top: 10px;
+    margin-top: 38px;
+  }
+}
+
+.card-img-top{
+  width: 360px;
+  height: 290px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card_1{
+  background-image: url("../images/blog/1.jpg");
+}
+
+.card_2{
+  background-image: url("../images/blog/2.jpg");
+}
+
+.card_3{
+  background-image: url("../images/blog/3.jpg");
+}
+
+.card-blank{
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  color:  rgba(103, 103, 103, 255);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item .card{
+  list-style: none;
+  border: none;
+  margin-top: 30px;
+  &:hover .card-title{
+    color: $primary-color;
+    text-decoration: none;
+  }
+  &:hover .blog-btn{
+    background-color: $primary-color;
+    color: white;
+  }
+
+}
+
+.item .card-title{
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: $font-family;
+  color: rgba(42, 42, 42, 255);
+  margin-top: 22px;
+  margin-bottom: 19px;
+}
+
+.item .card-text{
+  color: rgba(103, 103, 103, 255);
+  font-size: 0.875rem;
+  font-family: $font-family;
+  line-height: 1.2rem;
+}
+
+.owl-carousel{
+  position: relative;
+}
+
+.owl-dots{
+  display: none;
+}
+
+.owl-dots, .owl-nav{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  background-color: transparent;
+}
+.owl-dot{
+  background-color: #e2e2e2 !important;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-left: 15px;
+  border: none;
+  &:hover{
+    background-color: $primary-color !important;
+    border: none;
+  }
+}
+
+.owl-dot .active{
+  background-color: $primary-color !important;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-left: 15px;
+  border: none;
+}
+
+.owl-prev, .owl-next{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: white;
+  color: $second-color;
+  border-radius: 0;
+  border: 1px solid $second-color !important;
+  margin-right: 6px;
+  &:hover{
+    background-color: $primary-color  !important;
+    color: white;
+    border-radius: 0;
+    border: none;
+  }
+}

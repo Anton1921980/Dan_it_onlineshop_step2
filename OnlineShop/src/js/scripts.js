@@ -8,23 +8,14 @@
 
 
 
-// function setCssProperty(celector, property, art) {
-// 	if($(window).width() <= 480){
-// 		$(celector).css(property, art[0])
-// 	}else if ($(window).width() > 480 || $(window).width() <= 768){
-// 		$(celector).css(property, art[1])
-// 	}else {$(celector).css(property, art[2])
-// 	}
-// }
-
 
 // NAVBAR
 
-$(document).ready(function(){    
+$(document).ready(function(){
     $('.navbar-toggler').click(function(){
-        $(this).toggleClass('open');       
+        $(this).toggleClass('open');
         $('.navbar-collapse').toggleClass('active');
-        $('.navbar-collapse').toggleClass('wide');         
+        $('.navbar-collapse').toggleClass('wide');
     });
 });
 
