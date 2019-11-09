@@ -1,0 +1,57 @@
+.carousel-icon:hover {
+    background-color: #d58e32;
+    /*border: 1px solid red;*/
+
+}
+
+.carousel-icon {
+    position: relative;
+    top: -20px;
+    width: 50%;
+    height: 7%;
+    padding-left: 5%;
+    background-color: black;
+    /*margin-top: 93%;*/
+    /*margin-left: 13.5%;*/
+}
+.carousel-icon-2 {
+    left: 50%;
+    top: -40px;
+}
+
+.carousel-shop-window {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+    z-index: 5;
+    position: absolute;
+    width:100%;
+    top: 165px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.carousel-shop-window-title {
+    font-size: 36px;
+
+}
+
+.carousel-shop-window-btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: white;
+
+}
+
+// .img-carousel-wrapper {
+//     height: 466px;
+//     background-image: url("../img/top-slider/2.jpg");
+//     background-position: center;
+//     /*background-size: cover;*/
+//     /*overflow: hidden;*/
+//     background-attachment: fixed;
+// }
+
+// .img-carousel-wrapper-2 {
+//     background-image: url("../img/top-slider/1.jpg");
+
+// }
