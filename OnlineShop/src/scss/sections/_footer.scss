@@ -44,6 +44,7 @@
       font-family: $font-family;
       color: rgba(169, 169, 169, 255);
       text-transform: capitalize;
+      margin-top: 20px;
     }
     &-social-container{
       text-align: right;
@@ -51,6 +52,8 @@
       font-weight: bold;
       font-size: 1rem;
       letter-spacing: 0.6rem;
+      margin-top: 8px;
+      padding-top: 6px;
       & i:hover{
         color: $primary-color;
       }

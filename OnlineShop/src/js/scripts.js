@@ -1,21 +1,10 @@
-
-// setCssProperty(".container", "max-width", ["450px", "750px", "1120px"]);
-// if($(window).width() <= 480){
-// 	$(".logo__container").css("width", "114px");
-// 	$(".logo__container").css("height", "53px");
-// 	$(".header__contact::before").css("display", "none");
-// }
-
-
-
-
 // NAVBAR
 
-$(document).ready(function(){
+$(document).ready(function(){    
     $('.navbar-toggler').click(function(){
-        $(this).toggleClass('open');
+        $(this).toggleClass('open');       
         $('.navbar-collapse').toggleClass('active');
-        $('.navbar-collapse').toggleClass('wide');
+        $('.navbar-collapse').toggleClass('wide');         
     });
 });
 
