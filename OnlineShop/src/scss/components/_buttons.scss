@@ -1,0 +1,121 @@
+.own-btn{
+  color: white;
+  width: 165px;
+  height: 45px;
+  font-family: $font-family;
+  background-color: $second-color;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  border-radius: 0;
+  padding-top: 5px;
+  & .active{
+    background-color: $primary-color;
+  }
+}
+
+.btn-prod-details{
+  width: 80px;
+  height: 30px;
+  display: inline-block;
+  background-color: $second-color;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  font-family: $font-family;
+  color: white;
+  font-size: 0.625rem;
+  border-radius: 0;
+  padding-top: 8px;
+  &:hover{
+    color: white;
+  }
+}
+
+.btn-basket{
+  width: 110px;
+  height: 30px;
+  display: inline-block;
+  background-color: $second-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $font-family;
+  color: white;
+  font-size: 0.625em;
+  border-radius: 0;
+  &-light{
+    width: 132px;
+    height: 37px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $font-family;
+    color: white;
+    font-size: 0.8125rem;
+    border-radius: 0;
+    background-color: $primary-color;
+    &:hover{
+      color: white;
+    }
+  }
+  &:hover{
+    color: white;
+  }
+}
+
+.btn-social{
+  height: 39px;
+  width: 110px;
+  display: inline-block;
+  border: 1px solid $second-color;
+  text-align: center;
+  padding-top: 12px;
+  color:  rgba(136, 136, 136, 255);
+  font-size: 13px;
+  font-family: $font-family;
+  list-style: none;
+  text-decoration: none;
+  &:hover{
+    font-weight: bold;
+    color:  rgba(136, 136, 136, 255);
+  }
+  & .fab{
+    margin-right: 7px;
+    font-size: 1rem;
+  }
+  & .fa-google-plus-g, .fa-pinterest-p{
+    color: rgba(201, 34, 40, 255);
+  }
+  & .fa-twitter{
+    color: rgba(64, 153, 255, 255);
+  }
+  & .fa-linkedin-in{
+    color: rgba(0, 119, 181, 255);
+  }
+}
+
+.btn-social-fb{
+  height: 39px;
+  width: 90px;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding-top: 12px;
+  background-color: #3b5998;
+  color:  white;
+  font-size: 13px;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: $font-family;
+  & .fa-facebook-f{
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  &:hover{
+    font-weight: bold;
+    color: white;
+  }
+}
+

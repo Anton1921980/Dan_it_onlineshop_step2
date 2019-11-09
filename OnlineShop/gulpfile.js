@@ -97,7 +97,7 @@ gulp.task("watch_dev", function () {
             baseDir: "./"
         }
     })
-    gulp.watch(paths.html, gulp.series("html"))
+    gulp.watch("./src/templates/*.html", gulp.series("html"))
     gulp.watch(paths.img, gulp.series("img-compress"))
     gulp.watch(paths.css, gulp.series('styles_dev'))
     gulp.watch(paths.script, gulp.series("scripts_dev"))
@@ -113,7 +113,6 @@ gulp.task("watch", function () {
     gulp.watch(paths.html, gulp.series("html"))
     gulp.watch(paths.img, gulp.series("img-compress"))
     gulp.watch(paths.css, gulp.series('styles'))
-    gulp.watch(paths.script, gulp.series("scripts"))
     gulp.watch("./*.html").on("change", browserSync.reload)
 });
 
