@@ -11,16 +11,42 @@
   url('../fonts/poppins-v9-latin-regular.svg#Poppins') format('svg');
 }
 
-.main-container{
-  background-color: white;
-  @include flex-vertical();
+body{
   font-family: $font-family;
-}
-.container{
-  background-color: transparent;
-  @include flex-layout(space-between);
+  size: 16px;
+  color: $second-color;
 }
 
 a{
   cursor: pointer;
+}
+
+.title-light {
+  font-family: $font-family;
+  font-size: 1.25rem;
+  color: $primary-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 5%;
+    height: 3px;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: -12px;
+    left: 0%;
+  }
+
+  &::after {
+    content: "";
+    width: 70%;
+    height: 3px;
+    background-color: #e2e2e2;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+  }
 }

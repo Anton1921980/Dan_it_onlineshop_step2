@@ -1,35 +1,62 @@
-.footer{
-  &-container{
-    width: 100%;
-    background-color: $light-dark;
-    @include padding(60px, 0, 60px, 0);
-  }
-  &-title{
+.footer {
+  width: 100%;
+  background-color: $light-dark;
+  @include padding(60px, 0, 60px, 0);
+
+  &-title {
     color: white;
     font-family: $font-family;
-    font-size: 22px;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 35px;
   }
-  &-list{
-    list-style-type: none;
-    &-item{
-      display: block;
-      font-size: 14px;
+
+  &-list-item {
+    display: block;
+    margin-bottom: 0.8rem;
+    & a{
+      text-decoration: none;
+      font-size: 0.875rem;
       font-family: $font-family;
-      color:rgba(169, 169, 169, 255);
-      margin-bottom: 10px;
+      color: rgba(169, 169, 169, 255);
+      &:hover{
+        border-bottom: 1px solid rgba(169, 169, 169, 255);
+        width: 80%;
+      }
     }
   }
-  &-bottom{
+
+  &-cards-container {
+    width: 40px;
+    height: 28px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  &-bottom {
     width: 100%;
     background-color: $second-color;
     @include padding(40px, 0, 40px, 0);
-    &-text{
-      font-size: 14px;
+
+    &-text {
+      font-size: 0.875rem;
       font-family: $font-family;
-      color:rgba(169, 169, 169, 255);
+      color: rgba(169, 169, 169, 255);
+      text-transform: capitalize;
+      margin-top: 20px;
+    }
+    &-social-container{
+      text-align: right;
+      color: rgba(169, 169, 169, 255);
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.6rem;
+      margin-top: 8px;
+      padding-top: 6px;
+      & i:hover{
+        color: $primary-color;
+      }
     }
   }
 }

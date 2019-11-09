@@ -1,31 +1,81 @@
-.navbar{
-  width: 100%;
-  @include padding();
-  @include flex-layout();
-  background-color: $light-dark;
 
-  &-menu-container{
-    color: white;
-    font-family: $font-family;
-    font-size: 13px;
-    text-decoration: none;
-    text-transform: capitalize;
-  }
-  &-form-container{
-    color: white;
-    font-family: $font-family;
-    font-size: 13px;
-    text-transform: capitalize;
-  }
-  &-links{
-    text-decoration: none;
-    color: white;
-    font-family: $font-family;
-    font-size: 13px;
-    text-transform: capitalize;
-    &:hover{
-      border-bottom: 1px solid white;
-    }
-  }
+// .navbar-expand .navbar-nav .nav-link {
+//     /* padding-right: .5rem; */
+//     /* padding-left: .5rem; */
+//     margin-left: .5rem;
+//     margin-right: .5rem;
+//     border: 1px solid red;
+//     box-sizing: border-box;
+// }
+.navbar-top{
+ background-color: #343a40;
+
+.fa-lock:before{    
+  top:8px;
+  right:49px;
+  position:absolute;
 }
+.fa-user:before{
+  top:8px;
+  right:53px;
+  position:absolute;
+}
+.nav-item {
+position: relative;
+}
+.nav-link{    
+    border-bottom: 1px solid transparent; 
+}
+.nav-link:hover {
+    border-bottom: 1px solid ;   
+  }
+
+.navbar{
+    height: 54px;
+    font-size:13px; 
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// .navbar{
+//   width: 100%;
+//   @include padding();
+//   @include flex-layout();
+//   background-color: $light-dark;
+
+//   &-menu-container{
+//     color: white;
+//     font-family: $font-family;
+//     font-size: 13px;
+//     text-decoration: none;
+//     text-transform: capitalize;
+//   }
+//   &-form-container{
+//     color: white;
+//     font-family: $font-family;
+//     font-size: 13px;
+//     text-transform: capitalize;
+//   }
+//   &-links{
+//     text-decoration: none;
+//     color: white;
+//     font-family: $font-family;
+//     font-size: 13px;
+//     text-transform: capitalize;
+//     &:hover{
+//       border-bottom: 1px solid white;
+//     }
+//   }
+// }
 
