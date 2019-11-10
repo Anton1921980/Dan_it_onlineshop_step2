@@ -132,8 +132,8 @@
   margin-right: 6px;
   &:hover{
     background-color: $primary-color  !important;
-    color: white;
+    color: white !important;
     border-radius: 0;
-    border: none;
+    border: 1px solid $primary-color !important;
   }
 }
