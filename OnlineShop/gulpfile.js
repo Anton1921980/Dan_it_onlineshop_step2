@@ -91,6 +91,11 @@ gulp.task("clean", function () {
     return del(["dist/*", "!dist/fonts", "!dist/library"])
 })
 
+gulp.task("runUpIndex", function () {
+
+
+})
+
 gulp.task("watch_dev", function () {
     browserSync.init({
         server: {
@@ -102,6 +107,7 @@ gulp.task("watch_dev", function () {
     gulp.watch(paths.css, gulp.series('styles_dev'))
     gulp.watch(paths.script, gulp.series("scripts_dev"))
     gulp.watch("./*.html").on("change", browserSync.reload)
+    gulp.watch(".dist/css/*.css").on("change", browserSync.reload)
 });
 
 gulp.task("watch", function () {
@@ -118,5 +124,5 @@ gulp.task("watch", function () {
 
 
 gulp.task("develop", gulp.series("clean", gulp.parallel("html", "styles_dev", "scripts_dev", "img-compress"), "watch_dev"));
-gulp.task("build", gulp.series("clean", gulp.parallel("styles", "scripts", "img-compress"), "watch"));
+gulp.task("build", gulp.series("clean", "runUpIndex", gulp.parallel("styles", "scripts", "img-compress"), "watch"));
 
