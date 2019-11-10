@@ -480,6 +480,7 @@ table {
     margin-bottom: 30px; }
     .products-catalog-item .card {
       border: 1px solid #f4f5f7;
+      border-radius: 0;
       padding: 0;
       margin: 0; }
       .products-catalog-item .card-title {
