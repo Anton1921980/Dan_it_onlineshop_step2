@@ -1,0 +1,30 @@
+.nav-dropdown{
+  display: none;
+  width: 120px;
+  height: 35px;
+  margin: 0;
+  border: 1px solid $second-color;
+  padding-top: 7px;
+  text-align: center;
+}
+.dropdown-link{
+  color: $second-color;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  & .fas{
+    margin-right: 7px;
+  }
+}
+.dropdown-menu{
+  border: none;
+  border-radius: 0;
+}
+.dropdown-item{
+  font-family: $font-family;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: $second-color;
+  text-align: right;
+}
