@@ -480,6 +480,7 @@ table {
     margin-bottom: 30px; }
     .products-catalog-item .card {
       border: 1px solid #f4f5f7;
+      border-radius: 0;
       padding: 0;
       margin: 0; }
       .products-catalog-item .card-title {
@@ -882,8 +883,8 @@ table {
     margin-top: 38px; }
 
 .card-img-top {
-  width: 360px;
-  height: 290px;
+  width: 324px;
+  height: 261px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -893,7 +894,8 @@ table {
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: end;
-  align-items: flex-end; }
+  align-items: flex-end;
+  border-radius: 0; }
 
 .card_1 {
   background-image: url("../images/blog/1.jpg"); }
@@ -905,8 +907,8 @@ table {
   background-image: url("../images/blog/3.jpg"); }
 
 .card-blank {
-  width: 300px;
-  height: 60px;
+  width: 280px;
+  height: 56px;
   background-color: white;
   color: #676767;
   font-size: 0.8125rem;
@@ -919,6 +921,7 @@ table {
 .item .card {
   list-style: none;
   border: none;
+  text-align: center;
   margin-top: 30px; }
   .item .card:hover .card-title {
     color: #d58e32;
@@ -987,9 +990,9 @@ table {
   margin-right: 6px; }
   .owl-prev:hover, .owl-next:hover {
     background-color: #d58e32 !important;
-    color: white;
+    color: white !important;
     border-radius: 0;
-    border: none; }
+    border: 1px solid #d58e32 !important; }
 
 .bottom-form {
   width: 100%;

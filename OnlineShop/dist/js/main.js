@@ -3482,6 +3482,7 @@ function setCssProperty(celector, property, art) {
 
 })(window.Zepto || window.jQuery, window, document);
 
+// Products(loading)
 $(function () {
 	$(".loading").on("click", function () {
 		const btn = $(this);
@@ -3517,7 +3518,7 @@ $(function () {
 		});
 	});
 });
-
+// Products(set fit modal window)
 $(function () {
 	$(".btn-prod-details").on("click", function () {
 		const dataImg = $(this).data("whatever");
@@ -3531,7 +3532,21 @@ $(function () {
 		}
 	});
 });
+//Products(add to localStorage)
+$(function () {
+	$(".btn-basket").on("click", function () {
+		const data = $(this).closest(".card").find(".card-title").text();
+		localStorage.setItem("order_item", JSON.stringify(data));
+		// const f = JSON.parse(localStorage.getItem("order_item"))
 
+	});
+	$(".btn-basket-light").on("click", function () {
+		const data = $(this).closest(".modal-content").find(".modal-product-title").text();
+		localStorage.setItem("order_item", JSON.stringify(data));
+	});
+})
+
+// Products(filters)
 $(function () {
 	$(".products-filter-range").on("change", function () {
 		const value = $(this).val();

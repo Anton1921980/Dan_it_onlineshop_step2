@@ -16,8 +16,8 @@
 }
 
 .card-img-top{
-  width: 360px;
-  height: 290px;
+  width: 324px;
+  height: 261px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-radius: 0;
 }
 
 .card_1{
@@ -40,8 +41,8 @@
 }
 
 .card-blank{
-  width: 300px;
-  height: 60px;
+  width: 280px;
+  height: 56px;
   background-color: white;
   color:  rgba(103, 103, 103, 255);
   font-size: 0.8125rem;
@@ -53,6 +54,7 @@
 .item .card{
   list-style: none;
   border: none;
+  text-align: center;
   margin-top: 30px;
   &:hover .card-title{
     color: $primary-color;
@@ -132,8 +134,8 @@
   margin-right: 6px;
   &:hover{
     background-color: $primary-color  !important;
-    color: white;
+    color: white !important;
     border-radius: 0;
-    border: none;
+    border: 1px solid $primary-color !important;
   }
 }
