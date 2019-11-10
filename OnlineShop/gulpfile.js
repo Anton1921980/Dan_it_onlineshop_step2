@@ -17,6 +17,10 @@ const paths = {
     img:["./src/images/**"],
     css:["./src/scss/**/*.scss"],
     html:["./src/templates/index.html"],
+    htmlFinal:["./src/templates/final/index_final.html"],
+    htmlBuild:["./src/templates/final/index.html"],
+    templates:["./src/templates/*.html"],
+    final:["./src/templates/final/"],
     script:["./src/js/**.js"],
     dist:["./dist"],
     distCSS:["./dist/css"],
@@ -29,6 +33,27 @@ gulp.task("html", function () {
             .pipe(rigger())
             .pipe(gulp.dest("./"))
             .pipe(browserSync.stream());
+});
+
+gulp.task("htmlFinal", function () {
+    return gulp.src(paths.htmlBuild)
+            .pipe(rigger())
+            .pipe(gulp.dest("./"))
+            .pipe(browserSync.stream());
+});
+
+gulp.task("remove", function () {
+    return gulp.src(paths.templates)
+            .pipe(gulp.dest(paths.final))
+});
+
+gulp.task("rename", function () {
+    return gulp.src(paths.htmlFinal)
+            .pipe(rename({
+                basename: "index",
+                extname: ".html"
+            }))
+            .pipe(gulp.dest("./src/templates/final/"))
 });
 
 gulp.task("styles_dev", function () {
@@ -89,12 +114,16 @@ gulp.task("img-compress", function () {
 
 gulp.task("clean", function () {
     return del(["dist/*", "!dist/fonts", "!dist/library"])
-})
+});
 
-gulp.task("runUpIndex", function () {
+gulp.task("cleanTamplates", function () {
+    return del(["./src/templates/*", "!./src/templates/*.html"])
+});
 
+gulp.task("cleanHtml", function () {
+    return del(["./src/templates/final/index.html"])
+});
 
-})
 
 gulp.task("watch_dev", function () {
     browserSync.init({
@@ -116,7 +145,7 @@ gulp.task("watch", function () {
             baseDir: "./"
         }
     })
-    gulp.watch(paths.html, gulp.series("html"))
+    gulp.watch(paths.htmlBuild, gulp.series("htmlFinal"))
     gulp.watch(paths.img, gulp.series("img-compress"))
     gulp.watch(paths.css, gulp.series('styles'))
     gulp.watch("./*.html").on("change", browserSync.reload)
@@ -124,5 +153,5 @@ gulp.task("watch", function () {
 
 
 gulp.task("develop", gulp.series("clean", gulp.parallel("html", "styles_dev", "scripts_dev", "img-compress"), "watch_dev"));
-gulp.task("build", gulp.series("clean", "runUpIndex", gulp.parallel("styles", "scripts", "img-compress"), "watch"));
+gulp.task("build", gulp.series("clean", "cleanTamplates", "remove", "cleanHtml", "rename", "htmlFinal", gulp.parallel("styles", "scripts", "img-compress"),"watch"));
 

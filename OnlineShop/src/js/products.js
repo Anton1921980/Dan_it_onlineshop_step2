@@ -63,6 +63,46 @@ $(function () {
 })
 
 // Products(filters)
+
+
+function myFilter() {
+		const category = [];
+		const size = [];
+		const color = [];
+		const tag = [];
+		const list = ["category", "size", "color", "tag"];
+
+		const price = $(".products-filter-range").val();
+
+
+		$(".products-filter-categories-item").find(".active").each(function(element){
+			category.push($(element).data("target"))
+			console.log(1)
+		});
+		console.log(category)
+		$(".products-filter-size-label").filter("active").each(function(element){
+			size.push($(element).data("target"))
+		});
+		$(".products-filter-color-label").filter("active").each(function(element){
+			color.push($(element).data("target"))
+		});
+		$(".products-filter-tags-item").filter("active").each(function(element){
+			tag.push($(element).data("target"))
+		});
+		$(".products-catalog-item").css("display", "none");
+		$(".products-catalog-item").each(function (element) {
+			$.each(list, function (type) {
+				const meaning = $(element).filter(".card").data(`${type}`);
+				if($.inArray(meaning, `${type}`)){
+					$(element).css("display", "flex")}
+			});
+			if($(element).filter(".card").data("price") <= price){
+			$(element).css("display", "flex")}
+
+		})
+	};
+
+
 $(function () {
 	$(".products-filter-range").on("change", function () {
 		const value = $(this).val();
@@ -84,19 +124,22 @@ $(function () {
 			$(this).find("span").css("color", "white");
 		}
 	})
+
 });
 
 $(function () {
 	$(".products-filter-categories-item").on("click", function (event) {
 		if($(this).hasClass("active")){
-			console.log(1)
+
 			$(this).removeClass("active").find(".products-filter-categories-item-text").css("color", "#363636");
 			$(this).find(".products-filter-round-shape").css("background-color", "#363636")
 		}else {
-			console.log(2)
+
 			$(this).addClass("active").find(".products-filter-categories-item-text").css("color", "#d58e32");
 			$(this).find(".products-filter-round-shape").css("background-color", "#d58e32");
 		}
+		console.log($(".products-filter-categories-item").find("active"))
+		myFilter();
 	})
 })
 
@@ -113,6 +156,7 @@ $(function () {
 			$(this).next().css("background-color", "#d58e32");
 		}
 	})
+
 });
 $(function () {
 	$(".products-filter-tags-item").on("click",function () {
@@ -123,4 +167,5 @@ $(function () {
 			$(this).addClass("active").css("color", "#d58e32").css("border-color","#d58e32");
 		}
 	});
+
 });
