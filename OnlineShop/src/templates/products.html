@@ -20,7 +20,9 @@
 				<div class="products-catalog p-0 m-0">
 					<div class="row d-flex justify-content-md-between justify-content-center pr-2 m-0">
 						<div class="products-catalog-item d-flex justify-content-center p-0 col-12 col-md-6 col-lg-3">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="furniture" data-size="m"
+								 data-color="red"
+								 data-price="10" data-tag="chair">
 								<div class="products-img-card_1  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -52,7 +54,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-flex justify-content-center p-0 col-12 col-md-6 col-lg-3">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="sofa" data-size="l"
+								 data-color="yellow"
+								 data-price="40" data-tag="fashion">
 								<div class="products-img-card_2  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -85,7 +89,9 @@
 
 						</div>
 						<div class="products-catalog-item d-flex justify-content-center p-0 col-12 col-md-6 col-lg-3">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="chair" data-size="s"
+								 data-color="green"
+								 data-price="30" data-tag="chair">
 								<div class="products-img-card_3  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -117,7 +123,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-md-flex justify-content-center  p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="table" data-size="xl"
+								 data-color="black"
+								 data-price="80" data-tag="table">
 								<div class="products-img-card_4  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -149,7 +157,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-lg-flex justify-content-center p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="bedroom" data-size="xxl"
+								 data-color="pink"
+								 data-price="40" data-tag="fashion">
 								<div class="products-img-card_5  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -181,7 +191,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-lg-flex justify-content-center p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="sofa" data-size="m"
+								 data-color="blue"
+								 data-price="55" data-tag="women">
 								<div class="products-img-card_6  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -213,7 +225,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-lg-flex justify-content-center p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="table" data-size="s"
+								 data-color="black"
+								 data-price="20" data-tag="table">
 								<div class="products-img-card_7  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -242,10 +256,12 @@
 										<div class="card-content-price">&#36;30.00</div>
 									</div>
 								</div>
-							</div>
+							</div >
 						</div>
 						<div class="products-catalog-item d-lg-flex justify-content-center p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="furniture" data-size="xxl"
+								 data-color="yellow"
+								 data-price="40" data-tag="women">
 								<div class="products-img-card_8  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -277,7 +293,9 @@
 							</div>
 						</div>
 						<div class="products-catalog-item d-lg-flex justify-content-center p-0 col-12 col-md-6 col-lg-3 d-none ">
-							<div class="card" style="width: 14rem;">
+							<div class="card" style="width: 14rem;" data-category="chair" data-size="m"
+								 data-color="pink"
+								 data-price="70" data-tag="fashion">
 								<div class="products-img-card_9  products-img">
 									<div class="products-card-btn">
 										<a href="#" type="button" class="btn btn-prod-details"
@@ -324,30 +342,27 @@
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="container-fluid">
-								<div class="row position-static">
-									<div class="col-12 col-md-6 position-static">
-										<div class="row">
-											<div class="modal-product-img">
-											</div>
+								<div class="modal-header ">
+									<a  href="#" type="button" class="modal-product-close"
+										data-dismiss="modal">×</a>
+								</div>
+								<div class="row">
+									<div class="col-12 col-md-6 d-flex justify-content-center">
+										<div class="modal-product-img">
 										</div>
 									</div>
-									<div class="col-12 col-md-6">
-										<div class="modal-header position-static">
-											<div class="position-static">
-												<h3 class="modal-product-title">Sunbaby Magic Bear Chair</h3>
-												<div class="modal-product-stars">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star-half-alt"></i>
-													<i class="far fa-star"></i>
-													<i class="far fa-star"></i>
-													(0 reviews)
-												</div>
-												<a  href="#" type="button" class="close modal-product-close"
-													data-dismiss="modal">×</a>
-											</div>
-										</div>
+									<div class="col-12 col-md-6 position-static">
 										<div class="modal-body">
+											<h3 class="modal-product-title">Sunbaby Magic Bear Chair</h3>
+											<div class="modal-product-stars">
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star-half-alt"></i>
+												<i class="far fa-star"></i>
+												<i class="far fa-star"></i>
+												(0 reviews)
+											</div>
+										    <hr class="modal-product-hr">
 											<div>
 												<span class="modal-product-op">&#36;30.00</span>
 												<span class="modal-product-np">&#36;25.00</span>
@@ -372,7 +387,7 @@
 											<p class="my-3"><span class="modal-product-text">Category: </span>Furniture</p>
 										</div>
 									</div>
-									<div class="col-12 col-md-12 ml-auto">
+									<div class="col-12 col-md-12 col-lg-6 ml-auto">
 										<div class="modal-footer">
 											<div class="modal-product-footer-container">
 												<a href="#" class="btn-social-fb"><i class="fab fa-facebook-f"></i>
@@ -400,23 +415,23 @@
 					<div class="row">
 						<h3 class="products-filter-title">Filter By categories</h3>
 						<div class="products-filter-container">
-							<div class="products-filter-categories-item">
+							<div class="products-filter-categories-item" data-target="furniture">
 								<span class="products-filter-categories-item-text">>  Furniture</span>
 								<span class="products-filter-round-shape">5</span>
 							</div>
-							<div class="products-filter-categories-item">
+							<div class="products-filter-categories-item" data-target="sofa">
 								<span class="products-filter-categories-item-text">>  Sofa</span>
 								<span class="products-filter-round-shape">4</span>
 							</div>
-							<div class="products-filter-categories-item">
+							<div class="products-filter-categories-item" data-target="chair">
 								<span class="products-filter-categories-item-text">>  Chair</span>
 								<span class="products-filter-round-shape">6</span>
 							</div>
-							<div class="products-filter-categories-item">
+							<div class="products-filter-categories-item" data-target="table">
 								<span class="products-filter-categories-item-text">>  Table</span>
 								<span class="products-filter-round-shape">8</span>
 							</div>
-							<div class="products-filter-categories-item">
+							<div class="products-filter-categories-item" data-target="bedroom">
 								<span class="products-filter-categories-item-text">>  Bedroom</span>
 								<span class="products-filter-round-shape">3</span>
 							</div>
@@ -437,42 +452,42 @@
 						<h3 class="products-filter-title">Filter By color</h3>
 						<div class="products-filter-container">
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-red">
+								<label class="products-filter-color-label" for="filter-red" data-target="red">
 									<input type="checkbox" class="products-filter-color-input" name="color" id="filter-red"
 																								   value="">
 									<span class="products-filter-color-pseudo-red"><i class="fas fa-check"></i></span>
 									Red</label>
 							</div>
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-black">
+								<label class="products-filter-color-label" for="filter-black" data-target="black">
 									<input type="checkbox" class="products-filter-color-input" name="color"
 										   id="filter-black" value="">
 									<span class="products-filter-color-pseudo-black"><i class="fas fa-check"></i></span>
 									Black</label>
 							</div>
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-yellow">
+								<label class="products-filter-color-label" for="filter-yellow" data-target="yellow">
 									<input type="checkbox" class="products-filter-color-input" name="color"
 										   id="filter-yellow" value="">
 									<span class="products-filter-color-pseudo-yellow"><i class="fas fa-check"></i></span>
 									Yellow</label>
 							</div>
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-blue">
+								<label class="products-filter-color-label" for="filter-blue" data-target="blue">
 									<input type="checkbox" class="products-filter-color-input" name="color"
 										   id="filter-blue" value="">
 									<span class="products-filter-color-pseudo-blue"><i class="fas fa-check"></i></span>
 									Blue</label>
 							</div>
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-pink">
+								<label class="products-filter-color-label" for="filter-pink" data-target="pink">
 									<input type="checkbox" class="products-filter-color-input" name="color"
 										   id="filter-pink" value="">
 									<span class="products-filter-color-pseudo-pink"><i class="fas fa-check"></i></span>
 									Pink</label>
 							</div>
 							<div class="products-filter-color-form">
-								<label class="products-filter-color-label" for="filter-green">
+								<label class="products-filter-color-label" for="filter-green" data-target="green">
 									<input type="checkbox" class="products-filter-color-input" name="color"
 										   id="filter-green" value="">
 									<span class="products-filter-color-pseudo-green"><i class="fas fa-check"></i></span>
@@ -486,17 +501,17 @@
 						<h3 class="products-filter-title">Filter By size</h3>
 						<div class="products-filter-container">
 							<div class="products-filter-size-form">
-								<label class="products-filter-size-label" for="filter-s">
+								<label class="products-filter-size-label" for="filter-s"  data-target="s">
 									<input type="checkbox" class="products-filter-size-input" name="color"
 										   id="filter-s"
-										   value="">
+										   value="" data-target="s">
 									<span class="products-filter-size-pseudo"><i class="fas fa-check"></i></span>
 									s
 								</label>
 								<span class="products-filter-round-shape">4</span>
 							</div>
 							<div class="products-filter-size-form">
-								<label class="products-filter-size-label" for="filter-m">
+								<label class="products-filter-size-label" for="filter-m" data-target="m">
 									<input type="checkbox" class="products-filter-size-input" name="color"
 										   id="filter-m"
 										   value="">
@@ -506,7 +521,7 @@
 								<span class="products-filter-round-shape">8</span>
 							</div>
 							<div class="products-filter-size-form">
-								<label class="products-filter-size-label" for="filter-l">
+								<label class="products-filter-size-label" for="filter-l"  data-target="l">
 									<input type="checkbox" class="products-filter-size-input" name="color"
 										   id="filter-l"
 										   value="">
@@ -516,7 +531,7 @@
 								<span class="products-filter-round-shape">6</span>
 							</div>
 							<div class="products-filter-size-form">
-								<label class="products-filter-size-label" for="filter-xl">
+								<label class="products-filter-size-label" for="filter-xl"  data-target="xl">
 									<input type="checkbox" class="products-filter-size-input" name="color"
 										   id="filter-xl"
 										   value="">
@@ -526,7 +541,7 @@
 								<span class="products-filter-round-shape">4</span>
 							</div>
 							<div class="products-filter-size-form">
-								<label class="products-filter-size-label" for="filter-xxl">
+								<label class="products-filter-size-label" for="filter-xxl"  data-target="xxl">
 									<input type="checkbox" class="products-filter-size-input" name="color"
 										   id="filter-xxl"
 										   value="">
@@ -542,16 +557,21 @@
 						<h3 class="products-filter-title">Filter By tags</h3>
 						<div class="products-filter-container">
 							<div class="row mb-3 w-100%">
-								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Table</span>
-								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Chair</span>
+								<span class="products-filter-tags-item" data-target="table"><i class="fas fa-tags"></i>
+									Table</span>
+								<span class="products-filter-tags-item" data-target="chair"><i class="fas fa-tags"></i>
+									Chair</span>
 							</div>
 							<div class="row mb-3 w-100%">
-								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Hand Bag</span>
+								<span class="products-filter-tags-item" data-target="hangbag"><i
+										class="fas fa-tags"></i> 	Hand Bag</span>
 								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Women</span>
 							</div>
 							<div class="row mb-3 w-100%">
-								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Fashion</span>
-								<span class="products-filter-tags-item"><i class="fas fa-tags"></i>  Clothes</span>
+								<span class="products-filter-tags-item" data-target="fashion"><i
+										class="fas fa-tags"></i> 	Fashion</span>
+								<span class="products-filter-tags-item" data-target="clothes"><i
+										class="fas fa-tags"></i> 	Clothes</span>
 							</div>
 						</div>
 					</div>

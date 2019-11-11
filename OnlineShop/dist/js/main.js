@@ -21,12 +21,6 @@ $(function () {
 	});
 });
 
-setCssProperty(".container", "max-width", ["450px", "750px", "1120px"]);
-if($(window).width() <= 480){
-	$(".logo__container").css("width", "114px");
-	$(".logo__container").css("height", "53px");
-	$(".header__contact::before").css("display", "none");
-}
 
 
 
@@ -3531,10 +3525,10 @@ $(function () {
 		const modal =  $(this).data("target");
 		$(modal).find(".modal-product-img").css("background-image", `url(`+`dist/images/products/furniture/${dataImg}.png`+`)`);
 		if (window.innerWidth <= 576) {
-			$(modal).filter(".modal-dialog").addClass("modal-sm").addClass("modal-dialog-centered");
+			$(modal).find(".modal-dialog").addClass("modal-sm").addClass("modal-dialog-centered");
 
 		}else if(window.innerWidth > 992){
-			$(modal).filter(".modal-dialog").addClass("modal-lg");
+			$(modal).find(".modal-dialog").addClass("modal-lg");
 		}
 	});
 });
@@ -3553,6 +3547,7 @@ $(function () {
 })
 
 // Products(filters)
+
 $(function () {
 	$(".products-filter-range").on("change", function () {
 		const value = $(this).val();
@@ -3560,67 +3555,69 @@ $(function () {
 		$("#filterRangeValue").text(`up to $`+`${value}`);
 		console.log(value/max)
 		$(this).css("background", `linear-gradient(`+`90deg, black ${(value/max)*100}%, white ${(value/max)*100}%`+`)`);
-
 	})
 });
 
 $(function () {
 	$(".products-filter-color-label").on("change", function (event) {
-		if($(this).hasClass("active")){
-			$(this).removeClass("active").css("color", "#363636");
+		if($(this).hasClass("myactive")){
+			$(this).removeClass("myactive").css("color", "#363636");
 			$(this).find("span").css("color", "transparent")
 		}else {
-			$(this).addClass("active").css("color", "#d58e32");
+			$(this).addClass("myactive").css("color", "#d58e32");
 			$(this).find("span").css("color", "white");
 		}
 	})
+
 });
 
 $(function () {
 	$(".products-filter-categories-item").on("click", function (event) {
-		if($(this).hasClass("active")){
-			console.log(1)
-			$(this).removeClass("active").find(".products-filter-categories-item-text").css("color", "#363636");
+		if($(this).hasClass("myactive")){
+			$(this).removeClass("myactive").find(".products-filter-categories-item-text").css("color", "#363636");
 			$(this).find(".products-filter-round-shape").css("background-color", "#363636")
+			console.log(0)
+
 		}else {
-			console.log(2)
-			$(this).addClass("active").find(".products-filter-categories-item-text").css("color", "#d58e32");
+			$(this).addClass("myactive").find(".products-filter-categories-item-text").css("color", "#d58e32");
 			$(this).find(".products-filter-round-shape").css("background-color", "#d58e32");
+			console.log(1)
 		}
 	})
 })
 
 $(function () {
 	$(".products-filter-size-label").on("change", function (event) {
-		if($(this).hasClass("active")){
-			$(this).removeClass("active").css("color", "#363636");
+		if($(this).hasClass("myactive")){
+			$(this).removeClass("myactive").css("color", "#363636");
 			$(this).find("span").css("color", "transparent").css("background-color", "white").css("border-color","#363636");
 			$(this).next().css("background-color", "#363636");
 
 		}else {
-			$(this).addClass("active").css("color", "#d58e32");
+			$(this).addClass("myactive").css("color", "#d58e32");
 			$(this).find("span").css("color", "white").css("background-color", "#d58e32").css("border-color","#d58e32");
 			$(this).next().css("background-color", "#d58e32");
 		}
 	})
 });
+
 $(function () {
 	$(".products-filter-tags-item").on("click",function () {
-		if($(this).hasClass("active")){
-			$(this).removeClass("active").css("color", "#9c9c9c").css("border-color", "#9c9c9c");
+		if($(this).hasClass("myactive")){
+			$(this).removeClass("myactive").css("color", "#9c9c9c").css("border-color", "#9c9c9c");
 
 		}else {
-			$(this).addClass("active").css("color", "#d58e32").css("border-color","#d58e32");
+			$(this).addClass("myactive").css("color", "#d58e32").css("border-color","#d58e32");
 		}
 	});
 });
 // NAVBAR
 
-$(document).ready(function(){
+$(document).ready(function(){    
     $('.navbar-toggler').click(function(){
-        $(this).toggleClass('open');
+        $(this).toggleClass('open');       
         $('.navbar-collapse').toggleClass('active');
-        $('.navbar-collapse').toggleClass('wide');
+        $('.navbar-collapse').toggleClass('wide');         
     });
 });
 
