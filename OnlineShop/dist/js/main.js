@@ -3583,6 +3583,8 @@ $(function () {
 			$(this).find(".products-filter-round-shape").css("background-color", "#d58e32");
 			console.log(1)
 		}
+		console.log($(".products-filter-categories-item").find("active"))
+		myFilter();
 	})
 })
 
@@ -3599,6 +3601,7 @@ $(function () {
 			$(this).next().css("background-color", "#d58e32");
 		}
 	})
+
 });
 
 $(function () {
@@ -3610,6 +3613,7 @@ $(function () {
 			$(this).addClass("myactive").css("color", "#d58e32").css("border-color","#d58e32");
 		}
 	});
+
 });
 // NAVBAR
 
