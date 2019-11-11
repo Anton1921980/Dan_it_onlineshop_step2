@@ -16,7 +16,7 @@
 }
 
 .btn-prod-details{
-  width: 80px;
+  width: 75px;
   height: 30px;
   display: inline-block;
   background-color: $second-color;
@@ -34,7 +34,7 @@
 }
 
 .btn-basket{
-  width: 110px;
+  width: 106px;
   height: 30px;
   display: inline-block;
   background-color: $second-color;
@@ -45,16 +45,17 @@
   font-size: 0.625em;
   border-radius: 0;
   &-light{
-    width: 132px;
-    height: 37px;
+    width: 120px;
+    height: 35px;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     font-family: $font-family;
     color: white;
-    font-size: 0.8125rem;
+    font-size: 0.725rem;
     border-radius: 0;
     background-color: $primary-color;
+    padding-top: 10px;
     &:hover{
       color: white;
     }

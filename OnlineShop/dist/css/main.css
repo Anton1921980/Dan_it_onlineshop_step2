@@ -501,12 +501,12 @@ table {
         justify-content: space-between;
         margin-top: 19px; }
         .products-catalog-item .card-content span {
-          padding-top: 5px;
-          font-size: 1.5rem;
+          padding-top: 3px;
+          font-size: 1.25rem;
           color: #363636;
           display: inline-block;
-          width: 34px;
-          height: 34px;
+          width: 28px;
+          height: 28px;
           border: 2px solid #363636;
           margin-right: 5px; }
         .products-catalog-item .card-content-price {
@@ -514,8 +514,8 @@ table {
           font-size: 1.125rem;
           font-family: "﻿Poppins", ﻿courier;
           font-weight: bold;
-          width: 70px;
-          height: 34px;
+          width: 65px;
+          height: 28px;
           background-color: #363636;
           display: -webkit-box;
           display: flex;
@@ -581,8 +581,6 @@ table {
         font-family: "﻿Poppins", ﻿courier;
         text-transform: capitalize;
         display: inline-block; }
-        .products-filter-categories-item-text .active, .products-filter .products-filter-size-form-text .active {
-          color: #d58e32; }
     .products-filter-price {
       width: 70px;
       height: 32px;
@@ -764,6 +762,12 @@ table {
 .products-catalog-item .card:hover .card-content-price {
   background-color: #d58e32; }
 
+#productModal .modal-header {
+  border: none !important; }
+
+#productModal .modal-content {
+  border-radius: 0; }
+
 .modal-product {
   color: #363636;
   font-family: "﻿Poppins", ﻿courier;
@@ -781,16 +785,15 @@ table {
     color: #cccccc;
     margin-bottom: 15px; }
   .modal-product-img {
-    width: 436px;
-    height: 406px;
+    width: 390px;
+    height: 365px;
     background-color: #f4f5f7;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 60px;
-    margin-right: auto;
-    margin-left: auto; }
+    margin-top: 10px;
+    margin-bottom: 20px; }
   .modal-product-container {
     width: 100%; }
   .modal-product-footer-container {
@@ -812,23 +815,24 @@ table {
     text-transform: capitalize;
     font-weight: bold;
     text-align: left;
-    margin-top: 50px;
     margin-bottom: 18px;
     color: black; }
   .modal-product-close {
-    width: 38px;
-    height: 35px;
+    width: 41px;
+    height: 37px;
     background-color: black;
     display: block;
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     position: absolute;
-    top: 5%;
-    right: 10%;
-    text-decoration: none;
-    padding-bottom: 2px; }
+    top: 0%;
+    right: 0%;
+    text-decoration: none !important;
+    padding-top: 4px; }
+    .modal-product-close:hover {
+      color: white; }
   .modal-product-stars {
     font-size: 1rem; }
   .modal-product-op {
@@ -854,8 +858,8 @@ table {
   .modal-product-like {
     display: inline-block;
     font-size: 1.5rem;
-    width: 38px;
-    height: 38px;
+    width: 35px;
+    height: 35px;
     border-radius: 0;
     padding-top: 5px;
     border: 1px solid #363636;
@@ -863,9 +867,6 @@ table {
     position: relative;
     top: 5px;
     margin-left: 5px; }
-
-.products-filter-color-label .active {
-  color: #d58e32; }
 
 .blog {
   margin-top: 60px; }
@@ -1395,7 +1396,7 @@ a {
     background-color: #d58e32; }
 
 .btn-prod-details {
-  width: 80px;
+  width: 75px;
   height: 30px;
   display: inline-block;
   background-color: #363636;
@@ -1411,7 +1412,7 @@ a {
     color: white; }
 
 .btn-basket {
-  width: 110px;
+  width: 106px;
   height: 30px;
   display: inline-block;
   background-color: #363636;
@@ -1422,16 +1423,17 @@ a {
   font-size: 0.625em;
   border-radius: 0; }
   .btn-basket-light {
-    width: 132px;
-    height: 37px;
+    width: 120px;
+    height: 35px;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     font-family: "﻿Poppins", ﻿courier;
     color: white;
-    font-size: 0.8125rem;
+    font-size: 0.725rem;
     border-radius: 0;
-    background-color: #d58e32; }
+    background-color: #d58e32;
+    padding-top: 10px; }
     .btn-basket-light:hover {
       color: white; }
   .btn-basket:hover {
