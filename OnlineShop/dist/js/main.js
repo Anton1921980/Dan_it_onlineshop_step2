@@ -3616,14 +3616,25 @@ $(function () {
 
 });
 // NAVBAR
-
 $(document).ready(function(){    
     $('.navbar-toggler').click(function(){
         $(this).toggleClass('open');       
         $('.navbar-collapse').toggleClass('active');
         $('.navbar-collapse').toggleClass('wide');         
-    });
+    });   
 });
+
+// click to section
+$(document).ready(function(){
+    $(".click").click(function(event) {
+      event.preventDefault();
+      let id = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({
+          scrollTop: top
+      }, 1000);
+  });
+}); 
 
 // SLIDER GALLERY
 const sliderWrapper = document.getElementsByClassName('wrapper-slider')[0];
