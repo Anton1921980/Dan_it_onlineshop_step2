@@ -13,23 +13,13 @@
 <body>
 
         <!--Student 1-->
-		<!-- <section class="navbar-top">
-		    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		       <ul class="navbar-nav row">
-		         <li class="nav-item ml-4"><span class="navbar-text">USD</span></li>
-		         <li class="nav-item ml-5"><span class="navbar-text">English</span></li>
-		         <li class="nav-item ml-5"><a class="nav-link" href="#">Help</a></li>
-		         <li class="nav-item ml-auto"><a class="nav-link" href="#">Login</a></li>
-		         <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
-		       </ul>
-		     </nav>              
+		<!-- SECTION NAVBAR -->
 		
-		</section> -->
 		<section class="navbar-top">
 		  <div class="container">
 		  <nav class="navbar navbar-expand navbar-dark bg-dark">
 		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item ml-4">
+		      <li class="nav-item">
 		        <span class="navbar-text">USD</span>
 		      </li>
 		      <li class="nav-item ml-2">
@@ -42,13 +32,135 @@
 		
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item pr-3 pl-0">
-		        <a class="nav-link pl-0 pr-0 pb-1" href="#"><i class="fas fa-user"></i>Login</a>
+		        <a class="nav-link pl-0 pr-0 pb-1" href="#" data-toggle="modal" data-target="#myLogin"><i class="fas fa-user"></i>Login</a>
 		      </li>
 		      <li class="nav-item pl-4 pr-0 ">
-		        <a class="nav-link pl-0 pr-0 mr-0 pb-1" href="#"><i class="fas fa-lock"></i>Register</a>
+		        <a class="nav-link pl-0 pr-0 mr-0 pb-1" href="#" data-toggle="modal" data-target="#myRegister"><i class="fas fa-lock"></i>Register</a>
 		      </li>
 		    </ul>
+		<!--1 MODAl WINDOW LOGIN-->
+		<div id="myLogin" class="modal fade" tabindex="-1">
+		    <div class="modal-dialog ">
+		        <div class="modal-content">      <!--modal-content  тени, границы-->
+		            <div class="">
+		                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
+		            </div>
+		            <form class="form-horizontal" role="form" method="POST" action="/login">
+		                <div class="row ">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <h2>LOGIN</h2>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		                </div>
+		                <div class="row">
 		
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <div class="form-group">
+		                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
+		                                <input type="text" name="name" class="form-control" id="name" placeholder="Name/Email*"
+		                                       required autofocus>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		
+		                </div>
+		
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <div class="form-group has-danger">
+		                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		                                <input type="password" name="password" class="form-control" id="password"
+		                                       placeholder="Password*" required>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		                </div>
+		
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-6 mb-3  ">
+		                        <button type="submit" class="btn btn-dark"> LOGIN
+		                        </button>
+		                    </div>
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		</div>
+		
+		<!--1 MODAl WINDOW REGISTER-->
+		<div id="myRegister" class="modal fade" tabindex="-1">
+		    <div class="modal-dialog ">
+		        <div class="modal-content w-656">      <!--modal-content  тени, границы-->
+		            <div class="">
+		                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
+		            </div>
+		            <form class="form-horizontal" role="form" method="POST" action="/register">
+		                <div class="row ">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <h2>REGISTRATION</h2>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <div class="form-group">
+		                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
+		                                <input type="text" name="name" class="form-control" id="name1" placeholder="Name*"
+		                                       required autofocus>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <div class="form-group">
+		                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		                                <input type="text" name="email" class="form-control" id="email"
+		                                       placeholder="Email*" required autofocus>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		
+		                </div>
+		
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8">
+		                        <div class="form-group has-danger">
+		                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		                                <input type="password" name="password" class="form-control" id="password1"
+		                                       placeholder="Password*" required>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-2"></div>
+		                </div>
+		
+		                <div class="row">
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-6 mb-3  ">
+		                        <button type="submit" class="btn btn-dark"> REGISTER
+		                        </button>
+		                    </div>
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		</div>
 		  </nav>
 		 </div>
 		</section>
@@ -56,9 +168,9 @@
 		    <!-- <div class="overlay"></div> -->
 		    <div class="container">
 		        <div class="row d-flex align-items-center">
-		            <div class="phone col-4 d-flex justify-content-center align-items-center"><img class="d-none d-md-block mr-2  icon-tel" src="./src/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></div>
+		            <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./src/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
 		            <a class="col-4 d-flex justify-content-center"><img src="./src/images/logos/logo.png" alt="logo image"></a>
-		            <div class="cart col-4 d-flex justify-content-center">
+		            <div class="cart col-4 d-flex justify-content-end">
 		            <a href="#" class="cart d-flex align-items-center justify-content-end" data-toggle="modal" data-target="#exampleModal">
 		                    <img class="rounded" src="./src/images/logos/card_icon.png">
 		                    <div id="cardCountItem" class="my-card-items-count rounded-circle bg-dark text-white">1</div>
@@ -70,8 +182,9 @@
 		</header>
 		<section class="top-menu">
 		    <div class="container">
-		        <nav class="navbar navbar-expand-lg navbar-light">
-		            <form class="form-inline pb-lg-5 pt-2" action="/action_page.php">
+		       
+		          <nav class="navbar navbar-expand-xl navbar-light align-items-center align-content-center">
+		            <form class="col-6 col-md-3 col-lg-4 d-flex p-0 mt-4 nav-search" action="/action_page.php">
 		                <input class="form-control" type="text" placeholder="Search products">
 		                <div class="input-group-append">
 		                    <a class="btn-outline-none">
@@ -81,7 +194,7 @@
 		            </form>
 		
 		            <!-- Toggler/collapsibe Button -->
-		            <div class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar">
+		            <div class="navbar-toggler mb-4"  data-toggle="collapse" data-target="#collapsibleNavbar">
 		                <!-- <span class="navbar-toggler-icon"></span> -->
 		                <span></span>
 		                <span></span>
@@ -89,46 +202,51 @@
 		            </div>
 		
 		            <!-- Navbar links -->
-		            <div class="collapse navbar-collapse wide " id="collapsibleNavbar">
+		            <div class="collapse navbar-collapse wide justify-self-end" id="collapsibleNavbar">
 		               
 		                <ul class="navbar-nav">
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">HOME</a>
+		                        <a class="nav-link click" href="#home">HOME</a>
 		                    </li>
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">SLIDER</a>
+		                        <a class="nav-link click" href="#slider">SLIDER</a>
 		                    </li>
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">FEATURES</a>
+		                        <a class="nav-link click" href="#features">FEATURES</a>
 		                    </li>
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">STOCKS</a>
+		                        <a class="nav-link click" href="#stocks">STOCKS</a>
 		                    </li>
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">PRODUCTS</a>
+		                        <a class="nav-link click" href="#products">PRODUCTS</a>
 		                    </li>
 		                    <li class="nav-item">
-		                        <a class="nav-link" href="#">GALLERY</a>
+		                        <a class="nav-link click" href="#gallery">GALLERY</a>
 		                    </li>
 		                    <li class="nav-item">
-		                            <a class="nav-link" href="#">BLOG</a>
+		                            <a class="nav-link click" href="#blog">BLOG</a>
 		                    </li>
 		                </ul>
 		            
 		            </div>
 		        </nav>
-		    </div>
+		      </div>
+		   
 		</section>
 		<section class="top-slider">
 		    <div class="container">
+		            <div id="slider"><a name="top" href="#"></a></div>
 		        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 		            <div class="carousel-inner">                
-		                    <div class="carousel-shop-window text-white  text-uppercase text-center">
+		                    <div class="carousel-shop-window text-white  text-uppercase text-center d-flex align-items-center justify-content-center">
+		                        <div>
 		                            <p class="carousel-shop-window-title">indoor <span class="font-weight-bold">furniture</span>
 		                            </p>
 		                            <p class="carousel-shop-window-text">save up to 50% of all furniture</p>
 		                            <button class="carousel-shop-window-btn text-uppercase font-weight-bold">shop now</button>
 		                        </div>
+		                    </div>
+		
 		                   
 		                <div class="carousel-item active">                   
 		                    
@@ -138,22 +256,25 @@
 		                    <img src="./src/images/top-slider/2.jpg" class="d-block w-100" alt="...">
 		                </div>                
 		            </div>
-		            <a class="carousel-control-prev carousel-icon " href="#carouselExampleControls" role="button"
-		            data-slide="prev">
+		            <div class="controls">
+		
+		
+		        
+		            <a class="carousel-control-prev carousel-icon " href="#carouselExampleControls" role="button" data-slide="prev">
 		             <span class="carousel-control-prev-icon " aria-hidden="true"></span>
 		             <span class="sr-only">Previous</span>
-		         </a>
-		         <a class="carousel-control-next carousel-icon carousel-icon-2" href="#carouselExampleControls"
-		            role="button"
-		            data-slide="next">
+		            </a>
+		           <a class="carousel-control-next carousel-icon carousel-icon-2" href="#carouselExampleControls" role="button" data-slide="next">
 		             <span class="carousel-control-next-icon " aria-hidden="true"></span>
 		             <span class="sr-only">Next</span>
-		         </a>
+		            </a>
+		        </div>
 		        </div>
 		    </div>
 		</section>
 		<section class="features">
-		        <div class="container d-flex flex-wrap">    
+		        <div class="container d-flex flex-wrap">                  
+		            <div id="features"><a name="top" href="#"></a></div>
 		            <div class="col-12 col-sm-6 col-lg-3 features-item-wrapper ">
 		                <div class="features-item">
 		                    <div class="features-item-icon rounded-circle">
@@ -196,6 +317,7 @@
 <!--		&lt;!&ndash;		Student 2&ndash;&gt;-->
 		<section class="stocks">
 			<div class="container">
+				<div id="stocks"><a name="top" href="#"></a></div>
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-xl-6 d-none d-md-block text-center">
 						<a class="stocks-links" href="#">
@@ -238,6 +360,7 @@
 		</section>
 		<section class="products">
 			<div class="container ">
+				<div id="products"><a name="top" href="#"></a></div>
 				<div class="row">
 					<div class="col-lg-9 col-12 p-0 m-0">
 						<div class="d-flex justify-content-end p-0 m-0">
@@ -798,10 +921,12 @@
 				</div>
 			</div>
 		</section>
+		<!-- furniture gallery -->
 		<section class="gallery">
 		    <div class="container">
-		        <div class="row-no-wrap">
-		            <div class="furniture-gallery col-6 col-lg-6">
+		            <div id="gallery"><a name="top" href="#"></a></div>
+		        <div class="row">
+		            <div class="furniture-gallery w-sm-451 w-md-555 col-lg-6">
 		
 		                <div class="addList icons d-flex flex-column">
 		                    <a href="#" data-toggle="tooltip" data-placement="right" title="Add to wishlist"><i
@@ -834,8 +959,7 @@
 		                    </div>
 		
 		
-		                    <h2>furniture gallery</h2>
-		                    <div class="line  mt-2 mb-2 w-100"></div>
+		                    <h2>furniture gallery</h2>                
 		
 		
 		                    <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -875,8 +999,10 @@
 		                                <img class="avatar" src="./src/images/gallery/14.png" alt="gallery-image">
 		                            </div>
 		                            <div class="bottom-slider  w-100">
+		                                <div class="container">
+		                              <div class="row">
 		                                <div class="wrapper-slider d-flex row-no-wrap">
-		                                    <button class="btn-left col-1"> <i class="fas fa-chevron-left arrow"></i> </button>
+		                                    <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
 		                                    <img class="img-slider col-2 zoom" data-set="1" src="./src/images/gallery/10.png"
 		                                        alt="gallery-image">
 		                                    <img class="img-slider col-2" data-set="2" src="./src/images/gallery/11.png"
@@ -887,9 +1013,11 @@
 		                                        alt="gallery-image">
 		                                    <img class="img-slider col-2" data-set="5" src="./src/images/gallery/14.png"
 		                                        alt="gallery-image">
-		                                    <button class="btn-right col-1 w-50"> <i class="fas fa-chevron-right arrow"></i>
+		                                    <button class="btn-right"> <i class="fas fa-chevron-right arrow"></i>
 		                                    </button>
 		                                </div>
+		                              </div> 
+		                            </div>
 		                            </div>
 		
 		                        </div>
@@ -1002,31 +1130,31 @@
 		                    </div>
 		
 		
-		
-		
-		
-		
-		
 		                </div>
-		                <!-- <div class="gallery-two col-6 d-none d-lg-block  border h-100">
+		            </div> 
 		
-		                    <div class=" flex-column px-5">
-		                        <div class="py-5">
-		                            <span class="from py-2">FROM<span class="fromPrice">$50.80</span></span>
-		                            <div class="badroom py-2">Badroom Bed</div>
-		                            <button type="button" class="btn button-shop py-2">shop now</button>
+		              <div class="row">
+		                    <div class="container">
+		                      <div class="gallery-right  d-none d-lg-block  border h-100">
+		                        <div class=" flex-column px-5">
+		                            <div class="py-5">
+		                                <span class="from py-2">FROM<span class="fromPrice">$50.80</span></span>
+		                                <div class="badroom py-2">Badroom Bed</div>
+		                                <button type="button" class="btn button-shop py-2">shop now</button>
+		                            </div>
+		                            <img src="./src/images/product/bed.png" alt="" class="py-2 w-100">
 		                        </div>
-		                        <img src="./src/images/product/bed.png" alt="" class="py-2 w-100">
+		    
+		                      </div>
 		                    </div>
-		
-		                </div> -->
-		
-		            </div>
+		                  </div> 
+		            
 		        </div>
 		
 		</section>
 		<section class="blog">
 			<div class="container">
+				<div id="blog"><a name="top" href="#"></a></div>
 				<div class="row">
 					<div class="col"><h2 class="title-light">latest blog</h2></div>
 				</div>

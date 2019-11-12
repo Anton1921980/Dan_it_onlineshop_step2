@@ -63,6 +63,19 @@ table {
 .phone {
   color: white;
   font-size: 17px; }
+  .phone a {
+    display: -webkit-box;
+    display: flex;
+    color: white !important; }
+    .phone a:hover span {
+      border-bottom: 1px solid white; }
+    .phone a img {
+      position: relative; }
+    .phone a span {
+      border-bottom: 1px solid transparent;
+      align-self: center;
+      padding-top: 3px;
+      padding-bottom: 3px; }
 
 .cart img {
   padding: 14px;
@@ -138,27 +151,73 @@ table {
     position: absolute; }
   .navbar-top .nav-item {
     position: relative; }
+  .navbar-top .navbar-text {
+    color: white !important; }
   .navbar-top .nav-link {
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    color: white !important; }
   .navbar-top .nav-link:hover {
     border-bottom: 1px solid; }
   .navbar-top .navbar {
     height: 54px;
-    font-size: 13px; }
+    font-size: 13px;
+    padding: 0; }
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0px;
+  outline: 0; }
+  .modal-content .close {
+    opacity: 1;
+    width: 41px;
+    height: 37px;
+    text-align: center;
+    line-height: 0;
+    font-size: 16px; }
+  .modal-content .btn-dark {
+    background-color: black;
+    margin-bottom: 49px; }
+  .modal-content h2 {
+    padding-bottom: 31px;
+    padding-top: 64px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #2a2a2a; }
+
+.fa-times:before {
+  position: relative;
+  bottom: 5px; }
 
 .top-menu {
-  height: 69px;
+  height: 85px;
   box-shadow: 0px 5px 5px lightgrey; }
+  .top-menu .navbar {
+    padding: 0;
+    height: 100%; }
   .top-menu .input-group-append {
     position: relative;
     right: 50px; }
+  .top-menu .fa-search:before {
+    position: relative;
+    left: 25px;
+    bottom: 23px; }
   .top-menu .form-control {
     border: 1px solid black;
     border-radius: 0px; }
-  .top-menu .form-inline .form-control {
-    display: inline-block;
+  .top-menu .nav-search {
+    display: -webkit-box;
+    display: flex;
     width: auto;
-    vertical-align: middle; }
+    line-height: 85px; }
   .top-menu .navbar-toggler {
     border: none;
     width: 29px;
@@ -205,24 +264,24 @@ table {
     background: white; }
   .top-menu .navbar-collapse {
     position: relative;
-    bottom: 9px;
+    bottom: 2px;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end; }
   .top-menu .wide ul {
     margin-bottom: 25px; }
-    .top-menu .wide ul li {
+    .top-menu .wide ul a {
+      line-height: 85px;
+      padding: 0;
+      color: black !important;
       border-top: 3px solid transparent; }
-      .top-menu .wide ul li:hover {
+      .top-menu .wide ul a:hover, .top-menu .wide ul a:focus {
         background-color: #d58e32;
         border-top: 3px solid black; }
-      .top-menu .wide ul li a {
-        line-height: 69px;
-        padding: 0; }
   .top-menu .active ul {
     position: relative;
-    top: -55px;
+    top: -108px;
     background-color: #363636;
     width: 154px;
     height: 405px;
@@ -233,7 +292,8 @@ table {
       padding-top: 12px;
       padding-left: 40px;
       margin-right: 11px;
-      border-bottom: 1px solid transparent; }
+      border-bottom: 1px solid transparent;
+      display: block !important; }
       .top-menu .active ul li:first-child {
         padding-top: 86px; }
       .top-menu .active ul li:hover {
@@ -243,6 +303,10 @@ table {
       .top-menu .active ul li a {
         color: white !important;
         font-weight: 200 !important; }
+
+@media screen and (min-width: 220px) and (max-width: 1199px) {
+  .navbar-collapse ul li {
+    display: none !important; } }
 
 .stocks {
   width: 100%;
@@ -365,22 +429,23 @@ table {
         font-weight: bold; }
 
 .carousel-icon:hover {
-  background-color: #d58e32;
-  /*border: 1px solid red;*/ }
+  background-color: #d58e32; }
+
+.controls {
+  height: 32px; }
 
 .carousel-icon {
   position: relative;
-  top: -20px;
+  top: -30.5px;
   width: 50%;
-  height: 7%;
+  height: 100%;
   padding-left: 5%;
   background-color: black;
-  /*margin-top: 93%;*/
-  /*margin-left: 13.5%;*/ }
+  opacity: 1; }
 
 .carousel-icon-2 {
   left: 50%;
-  top: -40px; }
+  top: -63px; }
 
 .carousel-shop-window {
   font-family: 'Poppins', sans-serif;
@@ -388,7 +453,8 @@ table {
   z-index: 5;
   position: absolute;
   width: 100%;
-  top: 165px;
+  height: 35%;
+  top: 33%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); }
 
@@ -1047,11 +1113,10 @@ table {
       font-size: 1.25rem; }
 
 .furniture-gallery {
-  height: 454px;
+  overflow: hidden;
   position: relative; }
   .furniture-gallery a {
-    color: black;
-    font-weight: bold; }
+    color: black; }
 
 .tab-content {
   border-top: none;
@@ -1059,7 +1124,9 @@ table {
 
 .nav-tabs {
   width: 100%;
-  border: none; }
+  min-width: 451px;
+  border: none;
+  margin-top: 43px; }
   .nav-tabs .nav-item {
     height: 100%;
     margin: 0;
@@ -1162,6 +1229,7 @@ table {
   transition: all ease 0.8s; }
 
 .btn-left {
+  width: 33px;
   height: 70px;
   background-color: #2a2a2a;
   font-size: 20px;
@@ -1199,7 +1267,7 @@ table {
 /*панель слева добавить в избронное*/
 .addList {
   position: absolute;
-  top: 43%;
+  top: 26%;
   left: 20px;
   z-index: 10;
   /* не работала на слайдере до z-index  */ }
@@ -1224,11 +1292,24 @@ table {
   font-family: 'Poppins-SemiBold', sans-serif;
   font-size: 20px;
   font-weight: 400;
-  text-transform: uppercase; }
-
-/*линия горизонтальная*/
-.line {
-  border-bottom: 3px #e2e2e2 solid; }
+  text-transform: uppercase;
+  position: relative; }
+  .furniture-gallery h2:before {
+    content: "";
+    width: 5%;
+    height: 3px;
+    background-color: #d58e32;
+    position: absolute;
+    top: 33px;
+    left: 0%; }
+  .furniture-gallery h2:after {
+    content: "";
+    width: 95%;
+    height: 3px;
+    background-color: #e2e2e2;
+    position: absolute;
+    top: 33px;
+    left: 5%; }
 
 .gallery-big {
   max-height: 415px;
@@ -1244,7 +1325,7 @@ table {
   width: 105px;
   height: 105px;
   position: absolute;
-  top: 48%;
+  top: 27%;
   left: 64%;
   z-index: 2;
   opacity: 0.8;
@@ -1254,7 +1335,7 @@ table {
   position: absolute;
   width: 222px;
   height: 104px;
-  top: 66%;
+  top: 37%;
   right: 3%;
   z-index: 1;
   box-shadow: 2px 5px 5px grey; }
@@ -1273,7 +1354,7 @@ table {
   border-top: 29px solid black;
   border-right: 29px solid transparent; }
 
-.gallery-two {
+.gallery-right {
   height: 603px; }
 
 .features {
