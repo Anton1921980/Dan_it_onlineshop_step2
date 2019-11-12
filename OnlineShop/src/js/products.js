@@ -38,6 +38,7 @@ $(function () {
 $(function () {
 	$(".btn-prod-details").on("click", function () {
 		const dataImg = $(this).data("whatever");
+		console.log(dataImg)
 		const modal =  $(this).data("target");
 		$(modal).find(".modal-product-img").css("background-image", `url(`+`dist/images/products/furniture/${dataImg}.png`+`)`);
 		if (window.innerWidth <= 576) {
