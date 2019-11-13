@@ -1,13 +1,21 @@
 .top-menu{
-    height:69px;
+    height:85px;
     box-shadow: 0px 5px 5px lightgrey;
- 
+ .navbar{
+     padding:0;
+     height:100%;
+ }
   
  .input-group-append{
     position: relative;
     right: 50px;
- }   
 
+ }   
+.fa-search:before{
+    position: relative;
+    left: 25px;
+    bottom:23px;
+}
 
 .form-control{ 
 border:1px solid black;
@@ -15,10 +23,11 @@ border-radius: 0px;
 // width: 227px;
 // height: 47px;   
 }
-.form-inline .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
+.nav-search {    
+    display: flex;
+    width: auto; 
+    
+    line-height:85px;
 }
 
 .navbar-toggler {
@@ -80,33 +89,32 @@ border-radius: 0px;
 }
 .navbar-collapse{
     position: relative;
-    bottom: 9px;
+    bottom: 2px;
     display: flex;
     justify-content: flex-end;
  }
  
  .wide ul{
-   margin-bottom: 25px;
-    
-    li{   
-      
-        border-top: 3px solid transparent;
-    &:hover {
-     background-color: #d58e32;
-     border-top: 3px solid black;  
-  }
+   margin-bottom: 25px;  
+   
     a{  
-        line-height: 69px;
+        line-height: 85px;
         padding: 0;
-       
+        color: black !important;
+        border-top: 3px solid transparent;
+        // opacity: 1 !important;
+        &:hover, &:focus{
+            background-color: #d58e32;
+            border-top: 3px solid black;  
+        }
   }
  }
 
-}
+
  
  .active ul {
      position: relative;
-     top: -55px;
+     top: -108px;
      background-color:#363636;
      width: 154px;
      height: 405px;
@@ -118,6 +126,7 @@ border-radius: 0px;
         padding-left: 40px;
         margin-right: 11px;
         border-bottom: 1px solid transparent; 
+        display: block !important;
       &:first-child{
             padding-top: 86px;
       }
@@ -131,9 +140,14 @@ border-radius: 0px;
         a{
             color:white !important;
             font-weight: 200 !important;
+            
         }
      }
     }
 }
 
-    
+@media screen and (min-width: 220px)  and (max-width: 1199px) {
+    .navbar-collapse ul li{
+       display: none !important;
+    }
+}
