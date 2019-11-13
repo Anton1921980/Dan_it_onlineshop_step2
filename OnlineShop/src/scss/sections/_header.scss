@@ -23,7 +23,24 @@
 
 .phone{
     color: white;
-    font-size: 17px;
+    font-size: 17px;    
+    a{ 
+      display:flex;    
+      
+    color: white !important;
+     &:hover span{
+      border-bottom: 1px solid white;
+    }
+    img{
+   position: relative;
+    }
+    span{
+      border-bottom: 1px solid transparent;
+      align-self: center;
+      padding-top:3px; 
+      padding-bottom: 3px; 
+    }
+  }
 }
 
 .cart img{

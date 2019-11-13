@@ -1,22 +1,21 @@
 .carousel-icon:hover {
     background-color: #d58e32;
-    /*border: 1px solid red;*/
-
 }
-
+.controls{
+    height:32px;
+}
 .carousel-icon {
     position: relative;
-    top: -20px;
+    top: -30.5px;
     width: 50%;
-    height: 7%;
+    height: 100%;
     padding-left: 5%;
-    background-color: black;
-    /*margin-top: 93%;*/
-    /*margin-left: 13.5%;*/
+    background-color: black; 
+    opacity: 1;  
 }
 .carousel-icon-2 {
     left: 50%;
-    top: -40px;
+    top: -63px;
 }
 
 .carousel-shop-window {
@@ -25,13 +24,13 @@
     z-index: 5;
     position: absolute;
     width:100%;
-    top: 165px;
+    height:35%;
+    top: 33%;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
 .carousel-shop-window-title {
     font-size: 36px;
-
 }
 
 .carousel-shop-window-btn {
@@ -42,16 +41,3 @@
 
 }
 
-// .img-carousel-wrapper {
-//     height: 466px;
-//     background-image: url("../img/top-slider/2.jpg");
-//     background-position: center;
-//     /*background-size: cover;*/
-//     /*overflow: hidden;*/
-//     background-attachment: fixed;
-// }
-
-// .img-carousel-wrapper-2 {
-//     background-image: url("../img/top-slider/1.jpg");
-
-// }

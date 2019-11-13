@@ -1,12 +1,6 @@
 
-// .navbar-expand .navbar-nav .nav-link {
-//     /* padding-right: .5rem; */
-//     /* padding-left: .5rem; */
-//     margin-left: .5rem;
-//     margin-right: .5rem;
-//     border: 1px solid red;
-//     box-sizing: border-box;
-// }
+// NAVBAR 
+
 .navbar-top{
  background-color: #343a40;
 
@@ -22,9 +16,15 @@
 }
 .nav-item {
 position: relative;
+
+}
+.navbar-text{
+  color: white !important;
 }
 .nav-link{    
-    border-bottom: 1px solid transparent; 
+    border-bottom: 1px solid transparent;   
+    color: white !important;
+    
 }
 .nav-link:hover {
     border-bottom: 1px solid ;   
@@ -33,49 +33,53 @@ position: relative;
 .navbar{
     height: 54px;
     font-size:13px; 
+    padding: 0;
+    
 
 }
 
 }
 
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box; 
+  border-radius: 0px;
+  outline: 0;
+  
+  .close{
+    opacity:1;
+    width: 41px;
+    height: 37px;
+    text-align: center;
+    line-height:0;
+    font-size: 16px;
+  }
+  .btn-dark{
+    background-color: black;
+    margin-bottom: 49px;
+  }
+  h2{
+    padding-bottom: 31px;
+    padding-top: 64px;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(42, 42, 42, 255);
+  }
+}
+
+
+
+.fa-times:before { 
+  position: relative;
+  bottom: 5px;
+}
 
 
 
 
-
-
-
-
-
-
-// .navbar{
-//   width: 100%;
-//   @include padding();
-//   @include flex-layout();
-//   background-color: $light-dark;
-
-//   &-menu-container{
-//     color: white;
-//     font-family: $font-family;
-//     font-size: 13px;
-//     text-decoration: none;
-//     text-transform: capitalize;
-//   }
-//   &-form-container{
-//     color: white;
-//     font-family: $font-family;
-//     font-size: 13px;
-//     text-transform: capitalize;
-//   }
-//   &-links{
-//     text-decoration: none;
-//     color: white;
-//     font-family: $font-family;
-//     font-size: 13px;
-//     text-transform: capitalize;
-//     &:hover{
-//       border-bottom: 1px solid white;
-//     }
-//   }
-// }
 
