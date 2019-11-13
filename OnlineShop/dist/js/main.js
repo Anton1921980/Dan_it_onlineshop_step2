@@ -3615,7 +3615,7 @@ $(function () {
 	});
 
 });
-// NAVBAR
+// TOP-MENU 
 $(document).ready(function(){    
     $('.navbar-toggler').click(function(){
         $(this).toggleClass('open');       
@@ -3636,7 +3636,7 @@ $(document).ready(function(){
   });
 }); 
 
-// SLIDER GALLERY
+//  GALLERY  SLIDER
 const sliderWrapper = document.getElementsByClassName('wrapper-slider')[0];
 sliderWrapper.addEventListener('click', ({target}) => {
     if (target.classList.contains('img-slider')) {
