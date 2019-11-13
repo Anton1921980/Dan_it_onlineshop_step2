@@ -12,7 +12,8 @@
 </head>
 <body>
 
-<!-- SECTION NAVBAR -->
+<!-- Section NAVBAR -->
+
 
 <section class="navbar-top">
   <div class="container">
@@ -40,9 +41,9 @@
 <!--1 MODAl WINDOW LOGIN-->
 <div id="myLogin" class="modal fade" tabindex="-1">
     <div class="modal-dialog ">
-        <div class="modal-content">      <!--modal-content  тени, границы-->
+        <div class="modal-content">     
             <div class="">
-                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
+                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">×</button>
             </div>
             <form class="form-horizontal" role="form" method="POST" action="/login">
                 <div class="row ">
@@ -58,7 +59,7 @@
                     <div class="col-md-8">
                         <div class="form-group">
                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
+                                
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Name/Email*"
                                        required autofocus>
                             </div>
@@ -96,9 +97,9 @@
 <!--1 MODAl WINDOW REGISTER-->
 <div id="myRegister" class="modal fade" tabindex="-1">
     <div class="modal-dialog ">
-        <div class="modal-content w-656">      <!--modal-content  тени, границы-->
+        <div class="modal-content w-656">      
             <div class="">
-                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
+                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">×</button>
             </div>
             <form class="form-horizontal" role="form" method="POST" action="/register">
                 <div class="row ">
@@ -113,7 +114,7 @@
                     <div class="col-md-8">
                         <div class="form-group">
                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
+                                
                                 <input type="text" name="name" class="form-control" id="name1" placeholder="Name*"
                                        required autofocus>
                             </div>
@@ -152,8 +153,7 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-6 mb-3  ">
-                        <button type="submit" class="btn btn-dark"> REGISTER
-                        </button>
+                        <button type="submit" class="btn btn-dark"> REGISTER</button>
                     </div>
                 </div>
             </form>
@@ -163,8 +163,28 @@
   </nav>
  </div>
 </section>
+ <!-- Section HEADER  -->
 <header class="header">
-    <!-- <div class="overlay"></div> -->
+ <!-- модальное окно пустая корзина -->
+        <div class="modal-wrapper">
+                <div class="modal fade modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content  modal-wrapper-empty">
+            
+                            <div class="modal-body  modal-body-class-empty">
+                                    <button class="close p-3 text-white" data-dismiss="modal">×</button>
+                                <p class="modal-window-header text-center mb-2">Your cart is empty</p>
+                                <p class="modal-window-text text-center mb-0">But it's never too late to fix it :)
+                                </p>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальное окно с товаром -->
+
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./src/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
@@ -179,6 +199,7 @@
         </div>
     </div>
 </header>
+<!-- Section TOP-MENU -->
 <section class="top-menu">
     <div class="container">
        
@@ -232,6 +253,7 @@
       </div>
    
 </section>
+<!-- Section TOP-SLIDER -->
 <section class="top-slider">
     <div class="container">
             <div id="slider"><a name="top" href="#"></a></div>
@@ -271,6 +293,7 @@
         </div>
     </div>
 </section>
+<!-- Section FEATURES -->
 <section class="features">
         <div class="container d-flex flex-wrap">                  
             <div id="features"><a name="top" href="#"></a></div>
@@ -939,20 +962,20 @@
 		</div>
 	</div>
 </section>
-<!-- furniture gallery -->
+<!-- furniture GALLERY -->
 <section class="gallery">
     <div class="container">
             <div id="gallery"><a name="top" href="#"></a></div>
         <div class="row">
-            <div class="furniture-gallery w-sm-451 w-md-555 col-lg-6">
+            <div class="furniture-gallery col-sm-11 col-md-10 col-lg-6">
 
                 <div class="addList icons d-flex flex-column">
-                    <a href="#" data-toggle="tooltip" data-placement="right" title="Add to wishlist"><i
+                    <a href="#" data-view="tooltip" data-placement="right" title="Add to wishlist"><i
                             class="far fa-heart border border-dark p-2 mb-1 ml-2"></i></a>
-                    <a href="#"  id="galleryQV" data-toggle="modal" data-target="#productModal"  data-placement="right"
+                    <a href="#"  id="galleryQV" data-view="tooltip" data-toggle="modal" data-target="#productModal"  data-placement="right"
                        title="Quick view"><i
                             class="fas fa-eye border border-dark p-2 mb-1 ml-2"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="right" title="Add to cart"><i
+                    <a href="#" data-view="tooltip" data-placement="right" title="Add to cart"><i
                             class="fas fa-shopping-basket border border-dark p-2 mb-1 ml-2"></i></a>
                 </div>
 
@@ -979,26 +1002,30 @@
 
 
                     <h2>furniture gallery</h2>                
-
-
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <div class="w-100">
+                  <div class="container">
+                     <div class="row"> 
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">                                               
                         <li class="nav-item col-3">
                             <a class="nav-link active" id="featured-tab" data-toggle="tab" href="#featured" role="tab"
                                 aria-controls="featured" aria-selected="true">Featured</a>
                         </li>
-                        <li class="nav-item col-3">
-                            <a class="nav-link" id="top-seller-tab" data-toggle="tab" href="#top-seller" role="tab"
+                        <li class="nav-item next col-3">
+                            <a class="nav-link" id="top-seller-tab" data-toggle="tab" href="#featured" role="tab"
                                 aria-controls="top-seller" aria-selected="false">TOP SELLER</a>
                         </li>
                         <li class="nav-item col-3">
-                            <a class="nav-link" id="sale-off-tab" data-toggle="tab" href="#sale-off" role="tab"
+                            <a class="nav-link" id="sale-off-tab" data-toggle="tab" href="#featured" role="tab"
                                 aria-controls="sale-off" aria-selected="false">SALE OFF</a>
                         </li>
                         <li class="nav-item col-3">
-                            <a class="nav-link" id="top-rated-tab" data-toggle="tab" href="#top-rated" role="tab"
+                            <a class="nav-link" id="top-rated-tab" data-toggle="tab" href="#featured" role="tab"
                                 aria-controls="top-rated" aria-selected="false">TOP RATED</a>
                         </li>
                     </ul>
+                </div>
+                </div>
+            </div>   
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="featured" role="tabpanel"
                             aria-labelledby="featured-tab">
@@ -1023,7 +1050,7 @@
                                      alt="gallery-image">
                             </div>
                             <div class="bottom-slider  w-100">
-                                <div class="container">
+                             <div class="container">
                               <div class="row">
                                 <div class="wrapper-slider d-flex row-no-wrap">
                                     <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
@@ -1037,124 +1064,23 @@
                                         alt="gallery-image">
                                     <img class="img-slider col-2" data-set="5" src="./src/images/gallery/14.png"
                                         alt="gallery-image">
-                                    <button class="btn-right"> <i class="fas fa-chevron-right arrow"></i>
+                                    <button class="btn-right next"> <i class="fas fa-chevron-right arrow"></i>
                                     </button>
                                 </div>
                               </div> 
-                            </div>
-                            </div>
-
-                        </div>
-
-                        <div class="tab-pane fade" id="top-seller" role="tabpanel" aria-labelledby="top-seller-tab">
-                            <div class="review-container" data-set="1">
-                                <img class="avatar" src="./src/images/gallery/10.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container active" data-set="2">
-
-                                <img class="avatar" src="./src/images/gallery/11.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="3">
-                            </div>
-                            <div class="review-container" data-set="4">
-                                <img class="avatar" src="./src/images/gallery/13.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="5">
-                                <img class="avatar" src="./src/images/gallery/14.png" alt="gallery-image">
-                            </div>
-                            <div class="bottom-slider">
-                                <div class="wrapper-slider d-flex">
-                                    <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
-                                    <img class="img-slider" data-set="1" src="./src/images/gallery/10.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider zoom" data-set="2" src="./src/images/gallery/11.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="3" src="./src/images/gallery/12.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="4" src="./src/images/gallery/13.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="5" src="./src/images/gallery/14.png"
-                                        alt="gallery-image">
-                                    <button class="btn-right"> <i class="fas fa-chevron-right arrow"></i> </button>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                        <div class="tab-pane fade" id="sale-off" role="tabpanel" aria-labelledby="sale-off-tab">
-                            <div class="review-container" data-set="1">
-                                <img class="avatar" src="./src/images/gallery/10.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="2">
-                                <img class="avatar" src="./src/images/gallery/11.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="3">
-                                <img class="avatar" src="./src/images/gallery/12.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container active" data-set="4">
-                                <img class="avatar" src="./src/images/gallery/13.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="5">
-                                <img class="avatar" src="./src/images/gallery/14.png" alt="gallery-image">
-                            </div>
-
-                            <div class="bottom-slider">
-                                <div class="wrapper-slider d-flex">
-                                    <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
-                                    <img class="img-slider" data-set="1" src="./src/images/gallery/10.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="2" src="./src/images/gallery/11.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="3" src="./src/images/gallery/12.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider zoom" data-set="4" src="./src/images/gallery/13.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="5" src="./src/images/gallery/14.png"
-                                        alt="gallery-image">
-                                    <button class="btn-right"> <i class="fas fa-chevron-right arrow"></i> </button>
-                                </div>
+                             </div>
                             </div>
 
                         </div>
-                        <div class="tab-pane fade" id="top-rated" role="tabpanel" aria-labelledby="top-rated-tab">
-                            <div class="review-container" data-set="1">
-                                <img class="avatar" src="./src/images/gallery/10.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="2">
-                                <img class="avatar" src="./src/images/gallery/11.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="3">
-                                <img class="avatar" src="./src/images/gallery/12.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container" data-set="4">
-                                <img class="avatar" src="./src/images/gallery/13.png" alt="gallery-image">
-                            </div>
-                            <div class="review-container active" data-set="5">
-                                <img class="avatar" src="./src/images/gallery/14.png" alt="gallery-image">
-                            </div>
-                            <div class="bottom-slider">
-                                <div class="wrapper-slider d-flex">
-                                    <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
-                                    <img class="img-slider" data-set="1" src="./src/images/gallery/10.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="2" src="./src/images/gallery/11.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="3" src="./src/images/gallery/12.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider" data-set="4" src="./src/images/gallery/13.png"
-                                        alt="gallery-image">
-                                    <img class="img-slider zoom" data-set="5" src="./src/images/gallery/14.png"
-                                        alt="gallery-image">
-                                    <button class="btn-right"> <i class="fas fa-chevron-right arrow"></i> </button>
-                                </div>
-                            </div>
+                        
 
-                        </div>
+                       
+                             
                     </div>
 
 
                 </div>
+                
             </div> 
 
               <div class="row">

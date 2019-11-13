@@ -45,6 +45,17 @@ table {
 .header {
   background-color: #363636;
   height: 145px; }
+  .header .close {
+    background-color: #2A2A2A;
+    position: relative;
+    bottom: 16px;
+    left: 16px; }
+  .header .modal-window-header {
+    font-size: larger;
+    font-weight: bold;
+    color: #939393; }
+  .header .modal-window-text {
+    color: #939393; }
   .header .container {
     height: 100%; }
   .header .row {
@@ -1132,11 +1143,11 @@ table {
 
 .nav-tabs {
   width: 100%;
-  min-width: 451px;
   border: none;
   margin-top: 43px; }
   .nav-tabs .nav-item {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -1149,7 +1160,8 @@ table {
       border-radius: 0;
       padding: 0;
       border: 1px solid #e9e9e9; }
-      .nav-tabs .nav-item a:hover, .nav-tabs .nav-item a.active {
+      .nav-tabs .nav-item a:hover, .nav-tabs .nav-item a:focus, .nav-tabs .nav-item a.active {
+        font-size: 14px;
         border-top: 2px solid #d58e32;
         background-color: #f4f5f7;
         border-bottom: 1px solid #f4f5f7;
@@ -1217,24 +1229,17 @@ table {
 .img-slider {
   width: 70px;
   height: 70px;
-  border: 3px solid grey;
+  border: 3px solid rgba(204, 204, 204, 0.4);
+  box-shadow: 0px 0px 0px 35px rgba(204, 204, 204, 0.23) inset;
   margin-left: 2px;
   margin-right: 2px;
   box-sizing: border-box; }
 
-.zoom {
-  width: 70px;
-  height: 70px;
-  border: 3px solid;
+.img-slider:hover, .zoom {
+  box-shadow: none;
   -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s; }
-
-.img-slider:hover {
-  width: 70px;
-  height: 70px;
-  border: 3px solid #18cfab;
-  -webkit-transition: all ease 0.8s;
-  transition: all ease 0.8s; }
+  transition: all ease 0.5s;
+  border: 3px solid rgba(204, 204, 204, 0.7); }
 
 .btn-left {
   width: 33px;
@@ -1268,17 +1273,16 @@ table {
 
 .review-container.active {
   display: block;
-  text-align: right;
+  text-align: center;
   border: 1px solid  #e9e9e9;
   border-top: none; }
 
 /*панель слева добавить в избронное*/
 .addList {
   position: absolute;
-  top: 26%;
+  top: 42%;
   left: 20px;
-  z-index: 10;
-  /* не работала на слайдере до z-index  */ }
+  z-index: 10; }
 
 .wishlist {
   width: 37px;
@@ -1292,7 +1296,6 @@ table {
   color: black; }
 
 .addList a:hover {
-  /*text-decoration: underline;*/
   color: #d58e32; }
 
 .furniture-gallery h2 {
@@ -1333,8 +1336,8 @@ table {
   width: 105px;
   height: 105px;
   position: absolute;
-  top: 27%;
-  left: 64%;
+  top: 40%;
+  left: 68%;
   z-index: 2;
   opacity: 0.8;
   border: 0 !important; }
@@ -1343,7 +1346,7 @@ table {
   position: absolute;
   width: 222px;
   height: 104px;
-  top: 37%;
+  top: 55%;
   right: 3%;
   z-index: 1;
   box-shadow: 2px 5px 5px grey; }

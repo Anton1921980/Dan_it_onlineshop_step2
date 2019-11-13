@@ -3629,7 +3629,7 @@ $(function () {
 	});
 
 });
-// NAVBAR
+// TOP-MENU 
 $(document).ready(function(){    
     $('.navbar-toggler').click(function(){
         $(this).toggleClass('open');       
@@ -3650,7 +3650,7 @@ $(document).ready(function(){
   });
 }); 
 
-// SLIDER GALLERY
+//  GALLERY  SLIDER
 const sliderWrapper = document.getElementsByClassName('wrapper-slider')[0];
 sliderWrapper.addEventListener('click', ({target}) => {
     if (target.classList.contains('img-slider')) {
@@ -3663,6 +3663,8 @@ sliderWrapper.addEventListener('click', ({target}) => {
         reviews[activeIndex - 1].classList.add('active');
     }
 });
+
+
 const leftArrowBtn = document.getElementsByClassName('btn-left')[0];
 leftArrowBtn.addEventListener('click', () => {
     let circles = Array.from(document.getElementsByClassName('img-slider'));
@@ -3680,9 +3682,25 @@ rightArrowBtn.addEventListener('click', () => {
     circles.forEach(circle => circle.classList.remove('zoom'));
     circles[nextActiveIndex].classList.add('zoom');
     activateReview(nextActiveIndex);
+
+    
 });
 function activateReview(index) {
     let reviews = Array.from(document.getElementsByClassName('review-container'));
     reviews.forEach(review => review.classList.remove('active'));
     reviews[index].classList.add('active');
 }
+// tabs
+$('.nav-item').click(function() {
+    let circles = Array.from(document.getElementsByClassName('img-slider'));
+    let prevActiveIndex = circles.findIndex(circle => circle.classList.contains('zoom'));
+    let nextActiveIndex = prevActiveIndex === circles.length - 1 ? 0 : prevActiveIndex + 1;
+    circles.forEach(circle => circle.classList.remove('zoom'));
+    circles[nextActiveIndex].classList.add('zoom');
+    activateReview(nextActiveIndex);
+})
+
+//tooltips
+$(document).ready(function () {
+    $('[data-view="tooltip"]').tooltip();
+});

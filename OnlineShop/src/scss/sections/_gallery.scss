@@ -1,4 +1,4 @@
-// furniture gallery
+// Section GALLERY
 
 .furniture-gallery {
   // height: 454px;
@@ -16,13 +16,14 @@
 }
 
 .nav-tabs {
-  width: 100%;
-  min-width: 451px;
+  width: 100%; 
   border: none;
   margin-top: 43px;  
 
   .nav-item {   
     height: 100%;
+    width: 100%;
+
     margin: 0;
     padding: 0;
     text-align: center;
@@ -38,7 +39,9 @@
       border: 1px solid #e9e9e9;
             
       &:hover,
+      &:focus,
       &.active {
+        font-size: 14px;
         border-top: 2px solid #d58e32;       
         background-color: #f4f5f7;
         border-bottom: 1px solid #f4f5f7;
@@ -114,36 +117,18 @@
 .img-slider {
   width: 70px;
   height: 70px;
-  border: 3px solid grey;
-  // box-shadow: 0px 0px 0px 6px rgba(24, 207, 171, 0.23);
-
+  border: 3px solid rgba(204, 204, 204, 0.4);
+  box-shadow: 0px 0px 0px 35px rgba(204, 204, 204, 0.23) inset;
   margin-left: 2px;
   margin-right: 2px;
-  box-sizing: border-box;
-  // box-shadow внутренний затемнить
+  box-sizing: border-box; 
 }
-.zoom {
-  width: 70px;
-  height: 70px;
-  // border-radius: 50%;
-  // box-shadow: 0px 0px 0px 6px rgba(24, 207, 171, 0.23);
-  border: 3px solid;
-  transition: all ease 0.5s;
-  // margin-top: 3px;
-  // margin-left: 16px;
-  // margin-right: 16px;
-  // убрать затемнение
-}
-.img-slider:hover {
-  width: 70px;
-  height: 70px;
-  // border-radius: 50%;
-  border: 3px solid #18cfab;
-  // box-shadow: 0px 0px 0px 6px rgba(24, 207, 171, 0.23);
-  transition: all ease 0.8s;
-  // margin-top: 3px;
-  // margin-left: 20px;
-  // margin-right: 16px;
+
+
+.img-slider:hover, .zoom {
+  box-shadow: none;
+  transition: all ease 0.5s; 
+  border: 3px solid rgba(204, 204, 204, 0.7);
 }
 
 .btn-left {
@@ -181,7 +166,7 @@
 .review-container.active {
   display: block;
   // position: absolute;
-  text-align: right;
+  text-align: center;
   border:1px solid  #e9e9e9;
   border-top: none;
 }
@@ -193,9 +178,9 @@
 /*панель слева добавить в избронное*/
 .addList {
     position: absolute;
-    top: 26%;
+    top: 42%;
     left: 20px;
-    z-index: 10; /* не работала на слайдере до z-index  */
+    z-index: 10; 
 }
 
 .wishlist {
@@ -212,8 +197,7 @@
 .addList a {
     color: black;
 }
-.addList a:hover {
-    /*text-decoration: underline;*/
+.addList a:hover {  
     color: #d58e32;
 }
 
@@ -264,8 +248,8 @@
     width: 105px;
     height: 105px;
     position: absolute;
-    top: 27%;
-    left: 64%;
+    top: 40%;
+    left: 68%;
     z-index: 2;
     opacity: 0.8;
     border: 0 !important;
@@ -274,7 +258,7 @@
     position: absolute;
     width: 222px;
     height: 104px;
-    top: 37%;
+    top: 55%;
     right: 3%;
     z-index: 1;
     box-shadow: 2px 5px 5px grey;
