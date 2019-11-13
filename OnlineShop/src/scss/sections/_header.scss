@@ -2,6 +2,20 @@
 .header{
     background-color:#363636;    
     height: 145px;
+    .close{
+      background-color: #2A2A2A;
+      position: relative;
+      bottom: 16px;
+      left: 16px;
+      }
+      .modal-window-header{
+        font-size: larger;
+        font-weight: bold;
+        color: rgba(147, 147, 147, 255);
+      }
+      .modal-window-text{
+        color: rgba(147, 147, 147, 255);
+      }
    .container{
     height: 100%;
    }    

@@ -45,6 +45,17 @@ table {
 .header {
   background-color: #363636;
   height: 145px; }
+  .header .close {
+    background-color: #2A2A2A;
+    position: relative;
+    bottom: 16px;
+    left: 16px; }
+  .header .modal-window-header {
+    font-size: larger;
+    font-weight: bold;
+    color: #939393; }
+  .header .modal-window-text {
+    color: #939393; }
   .header .container {
     height: 100%; }
   .header .row {
