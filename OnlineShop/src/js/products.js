@@ -36,7 +36,7 @@ $(function () {
 });
 // Products(set fit modal window)
 $(function () {
-	$(".btn-prod-details").on("click", function () {
+	$("body").on("click", ".btn-prod-details", function () {
 		const dataImg = $(this).data("whatever");
 		console.log(dataImg)
 		const modal =  $(this).data("target");
