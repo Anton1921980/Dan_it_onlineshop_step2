@@ -1,44 +1,59 @@
+// Section HEADER
 .header{
-    background-color:#363636;    
-    height: 145px;
-   .container{
+  background-color:#363636;
+  height: 145px;
+  .close{
+    background-color: #2A2A2A;
+    position: relative;
+    bottom: 16px;
+    left: 16px;
+  }
+  .modal-window-header{
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(147, 147, 147, 255);
+  }
+  .modal-window-text{
+    color: rgba(147, 147, 147, 255);
+  }
+  .container{
     height: 100%;
-   }    
-    .row{        
-       height: 100%;
-    }
-    a{ 
-      display: block;  
-    }
-   }
+  }
+  .row{
+    height: 100%;
+  }
+  a{
+    display: block;
+  }
+}
 
-   .overlay{
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(244, 244, 244, 0.79);
-   }
+.overlay{
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(244, 244, 244, 0.79);
+}
 
 .phone{
-    color: white;
-    font-size: 17px;    
-    a{ 
-      display:flex;    
-      
+  color: white;
+  font-size: 17px;
+  a{
+    display:flex;
+
     color: white !important;
-     &:hover span{
+    &:hover span{
       border-bottom: 1px solid white;
     }
     img{
-   position: relative;
+      position: relative;
     }
     span{
       border-bottom: 1px solid transparent;
       align-self: center;
-      padding-top:3px; 
-      padding-bottom: 3px; 
+      padding-top:3px;
+      padding-bottom: 3px;
     }
   }
 }
@@ -55,5 +70,5 @@
   height: 25px;
   margin: -10px;
   text-align: center;
-  line-height: 25px; 
+  line-height: 25px;
 }

@@ -45,6 +45,17 @@ table {
 .header {
   background-color: #363636;
   height: 145px; }
+  .header .close {
+    background-color: #2A2A2A;
+    position: relative;
+    bottom: 16px;
+    left: 16px; }
+  .header .modal-window-header {
+    font-size: larger;
+    font-weight: bold;
+    color: #939393; }
+  .header .modal-window-text {
+    color: #939393; }
   .header .container {
     height: 100%; }
   .header .row {
@@ -106,7 +117,9 @@ table {
     display: block;
     margin-bottom: 0.8rem; }
     .footer-list-item a {
+      display: inline;
       text-decoration: none;
+      list-style: none;
       font-size: 0.875rem;
       font-family: "﻿Poppins", ﻿courier;
       color: darkgray; }
@@ -482,7 +495,12 @@ table {
     right: 44%; }
   .products-card-btn {
     width: 96%;
-    text-align: justify;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    align-items: center;
     opacity: 0;
     padding-left: 5px; }
   .products .load {
@@ -1536,7 +1554,7 @@ a {
     color: white; }
 
 .btn-basket {
-  width: 106px;
+  width: 108px;
   height: 30px;
   display: inline-block;
   background-color: #363636;

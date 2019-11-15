@@ -17,7 +17,7 @@
   &-card {
     &-btn {
       width: 96%;
-      text-align: justify;
+      @include flex-layout(space-around, center);
       opacity: 0;
       padding-left: 5px;
 

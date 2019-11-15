@@ -1,151 +1,151 @@
-<!-- SECTION NAVBAR -->
+<!-- Section NAVBAR -->
+
 
 <section class="navbar-top">
-  <div class="container">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <span class="navbar-text">USD</span>
-      </li>
-      <li class="nav-item ml-2">
-        <span class="navbar-text">English</span>
-      </li>
-      <li class="nav-item pl-2">
-        <a class="nav-link pl-0 pr-0 pb-1" href="#">Help</a>
-      </li>
-    </ul>
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <span class="navbar-text">USD</span>
+                </li>
+                <li class="nav-item ml-2">
+                    <span class="navbar-text">English</span>
+                </li>
+                <li class="nav-item pl-2">
+                    <a class="nav-link pl-0 pr-0 pb-1" href="#">Help</a>
+                </li>
+            </ul>
 
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item pr-3 pl-0">
-        <a class="nav-link pl-0 pr-0 pb-1" href="#" data-toggle="modal" data-target="#myLogin"><i class="fas fa-user"></i>Login</a>
-      </li>
-      <li class="nav-item pl-4 pr-0 ">
-        <a class="nav-link pl-0 pr-0 mr-0 pb-1" href="#" data-toggle="modal" data-target="#myRegister"><i class="fas fa-lock"></i>Register</a>
-      </li>
-    </ul>
-<!--1 MODAl WINDOW LOGIN-->
-<div id="myLogin" class="modal fade" tabindex="-1">
-    <div class="modal-dialog ">
-        <div class="modal-content">      <!--modal-content  тени, границы-->
-            <div class="">
-                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item pr-3 pl-0">
+                    <a class="nav-link pl-0 pr-0 pb-1" href="#" data-toggle="modal" data-target="#myLogin"><i class="fas fa-user"></i>Login</a>
+                </li>
+                <li class="nav-item pl-4 pr-0 ">
+                    <a class="nav-link pl-0 pr-0 mr-0 pb-1" href="#" data-toggle="modal" data-target="#myRegister"><i class="fas fa-lock"></i>Register</a>
+                </li>
+            </ul>
+            <!--1 MODAl WINDOW LOGIN-->
+            <div id="myLogin" class="modal fade" tabindex="-1">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="">
+                            <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">×</button>
+                        </div>
+                        <form class="form-horizontal" role="form" method="POST" action="/login">
+                            <div class="row ">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2>LOGIN</h2>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+
+                                            <input type="text" name="name" class="form-control" id="name" placeholder="Name/Email*"
+                                                   required autofocus>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="form-group has-danger">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="password" name="password" class="form-control" id="password"
+                                                   placeholder="Password*" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-6 mb-3  ">
+                                    <button type="submit" class="btn btn-dark"> LOGIN
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <form class="form-horizontal" role="form" method="POST" action="/login">
-                <div class="row ">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <h2>LOGIN</h2>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
 
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Name/Email*"
-                                       required autofocus>
-                            </div>
+            <!--1 MODAl WINDOW REGISTER-->
+            <div id="myRegister" class="modal fade" tabindex="-1">
+                <div class="modal-dialog ">
+                    <div class="modal-content w-656">
+                        <div class="">
+                            <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">×</button>
                         </div>
-                    </div>
-                    <div class="col-md-2"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="form-group has-danger">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="password" name="password" class="form-control" id="password"
-                                       placeholder="Password*" required>
+                        <form class="form-horizontal" role="form" method="POST" action="/register">
+                            <div class="row ">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h2>REGISTRATION</h2>
+                                </div>
+                                <div class="col-md-2"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
 
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-6 mb-3  ">
-                        <button type="submit" class="btn btn-dark"> LOGIN
-                        </button>
+                                            <input type="text" name="name" class="form-control" id="name1" placeholder="Name*"
+                                                   required autofocus>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="text" name="email" class="form-control" id="email"
+                                                   placeholder="Email*" required autofocus>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="form-group has-danger">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input type="password" name="password" class="form-control" id="password1"
+                                                   placeholder="Password*" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-6 mb-3  ">
+                                    <button type="submit" class="btn btn-dark"> REGISTER</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!--1 MODAl WINDOW REGISTER-->
-<div id="myRegister" class="modal fade" tabindex="-1">
-    <div class="modal-dialog ">
-        <div class="modal-content w-656">      <!--modal-content  тени, границы-->
-            <div class="">
-                <button class="close p-3 text-white" style="background-color: #2A2A2A" data-dismiss="modal">x</button>
             </div>
-            <form class="form-horizontal" role="form" method="POST" action="/register">
-                <div class="row ">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <h2>REGISTRATION</h2>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <!--<div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>-->
-                                <input type="text" name="name" class="form-control" id="name1" placeholder="Name*"
-                                       required autofocus>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="text" name="email" class="form-control" id="email"
-                                       placeholder="Email*" required autofocus>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="form-group has-danger">
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <input type="password" name="password" class="form-control" id="password1"
-                                       placeholder="Password*" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-6 mb-3  ">
-                        <button type="submit" class="btn btn-dark"> REGISTER
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
+        </nav>
     </div>
-</div>
-  </nav>
- </div>
 </section>
