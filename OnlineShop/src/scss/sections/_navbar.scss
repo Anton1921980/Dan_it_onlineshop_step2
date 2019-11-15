@@ -1,42 +1,40 @@
-
-// NAVBAR 
-
+// Section NAVBAR
 .navbar-top{
- background-color: #343a40;
+  background-color: #343a40;
 
-.fa-lock:before{    
-  top:8px;
-  right:49px;
-  position:absolute;
-}
-.fa-user:before{
-  top:8px;
-  right:53px;
-  position:absolute;
-}
-.nav-item {
-position: relative;
+  .fa-lock:before{
+    top:8px;
+    right:49px;
+    position:absolute;
+  }
+  .fa-user:before{
+    top:8px;
+    right:53px;
+    position:absolute;
+  }
+  .nav-item {
+    position: relative;
 
-}
-.navbar-text{
-  color: white !important;
-}
-.nav-link{    
-    border-bottom: 1px solid transparent;   
+  }
+  .navbar-text{
     color: white !important;
-    
-}
-.nav-link:hover {
-    border-bottom: 1px solid ;   
+  }
+  .nav-link{
+    border-bottom: 1px solid transparent;
+    color: white !important;
+
+  }
+  .nav-link:hover {
+    border-bottom: 1px solid ;
   }
 
-.navbar{
+  .navbar{
     height: 54px;
-    font-size:13px; 
+    font-size:13px;
     padding: 0;
-    
 
-}
+
+  }
 
 }
 
@@ -47,10 +45,10 @@ position: relative;
   width: 100%;
   pointer-events: auto;
   background-color: #fff;
-  background-clip: padding-box; 
+  background-clip: padding-box;
   border-radius: 0px;
   outline: 0;
-  
+
   .close{
     opacity:1;
     width: 41px;
@@ -74,12 +72,7 @@ position: relative;
 
 
 
-.fa-times:before { 
+.fa-times:before {
   position: relative;
   bottom: 5px;
 }
-
-
-
-
-

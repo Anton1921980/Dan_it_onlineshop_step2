@@ -1,13 +1,14 @@
+// Section FEATURES
 .features {
     padding-top: 20px;
     z-index: 1000;
 }
 
-.features-item {   
+.features-item {
     margin: 0 auto;
     width: 260px;
     text-align: center;
-    padding-top: 2px;  
+    padding-top: 2px;
     position: relative;
 }
 
@@ -38,7 +39,7 @@
     margin-top: 3px;
     box-sizing: border-box;
     padding: 16px 0;
-    background-color: white;   
+    background-color: white;
 }
 
 .features-item-text {
@@ -64,3 +65,4 @@
 .features-item:hover > .features-item-icon {
     border: 1px solid #d58e32;
 }
+
