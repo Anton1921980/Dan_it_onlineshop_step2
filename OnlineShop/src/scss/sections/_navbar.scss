@@ -1,4 +1,105 @@
 // Section NAVBAR
+@media screen and (min-width: 768px) {
+#to-top{
+  position:fixed;
+  left: 95%;
+  top:70%;
+  width:50px;
+  height:50px;
+  background-color:black;
+  cursor: pointer; 
+  z-index: 1111;
+  transform: rotate(0deg);
+  opacity: 0.7;
+}
+#to-top span {
+  display: block;
+  position: absolute;
+  height: 5px; 
+  width: 30px;
+  background-color: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  z-index: 11;
+  top: 21px;
+}
+#to-top:hover{
+  opacity:0.8;
+}
+#to-top:hover span{
+  // background-color: #d58e32;
+  transition: 0.3s ease-in; 
+  top:19px;
+}
+
+
+#to-top span:nth-child(1) {  
+  left: 19px;
+  transform: rotate(45deg);
+}
+
+#to-top span:nth-child(2) { 
+  transform: rotate(135deg);
+}
+#to-top span:nth-child(3) {
+  left: 6px;
+  top: 65px;
+  width: 35px; 
+  transform: rotate(90deg);
+  opacity: 0;
+ }
+
+ #to-top.open span:nth-child(1) {
+  left: 10px;
+  top:-20px;  
+  transform: rotate(90deg);
+  transition: 1s ease;
+  opacity:0;
+}
+
+#to-top.open span:nth-child(2) {
+  top:-20px;
+ left: 10px;
+ transform: rotate(90deg);
+ transition: 1s ease;
+ opacity:0;
+}
+#to-top span:nth-child(4) {
+  left: 19px;
+  top:43px;  
+  transform: rotate(5deg);
+  transition: 0.7s ease;
+  opacity:0;
+}
+#to-top span:nth-child(5) {
+  top:43px;
+  left: 0px;
+  transform: rotate(175deg);
+  transition: 0.7s ease;
+  opacity:0;
+}
+#to-top.open span:nth-child(4) { 
+  opacity: 1;
+  top:17px;
+  transform: rotate(45deg);
+}
+
+#to-top.open span:nth-child(5) {  
+ opacity: 1;
+ top:17px;
+ transform: rotate(135deg);
+}
+// #to-top.open span:nth-child(3) { 
+//   top: 23px;
+//   left: 6px;
+//   opacity: 1; 
+//   transition: 0.5s ease;
+//  }
+}
+
 .navbar-top{
   background-color: #343a40;
 
@@ -32,8 +133,6 @@
     height: 54px;
     font-size:13px;
     padding: 0;
-
-
   }
 
 }

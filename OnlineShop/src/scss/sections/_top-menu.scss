@@ -125,23 +125,20 @@
     li{
       padding-top: 12px;
       padding-left: 40px;
-      margin-right: 11px;
-      border-bottom: 1px solid transparent;
+      margin-right: 11px;     
       display: block !important;
       &:first-child{
         padding-top: 86px;
-      }
-      &:hover{
-        border-bottom: 1px solid white;
-      }
-      &:hover a{
-        font-weight: 500 !important;
-      }
-
+      }   
       a{
+        padding-left: 40px;
         color:white !important;
         font-weight: 200 !important;
-
+        border-bottom: 1px solid transparent;
+        &:hover, &:focus {
+          border-bottom: 1px solid white;
+          font-weight: 500 !important;
+        }
       }
     }
   }
