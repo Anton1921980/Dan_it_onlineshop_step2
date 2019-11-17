@@ -281,4 +281,21 @@
 
 .gallery-right{
     height: 603px;
+    .from{      
+      font-size: 16px;
+    }
+    .fromPrice{
+      color: #79ae30;
+      font-size: 44px;
+    }
+    .bedroom{
+      font-size: 48pt;
+      color: rgba(213, 142, 50, 255);
+    }
+    .button-shop{
+      background-color:#79ae30;
+      color:white;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
 }
