@@ -1,7 +1,7 @@
 <!-- Section HEADER  -->
 <header class="header">
     <!-- модальное окно пустая корзина -->
-    <div class="modal-wrapper">
+    <!-- <div class="modal-wrapper">
         <div class="modal fade modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content  modal-wrapper-empty">
@@ -15,17 +15,71 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Модальное окно с товаром -->
-
+    <div class="modal fade modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content modal-wrapper-full">
+                <button class="close p-3 text-white" data-dismiss="modal">×</button>
+                <div class=" col-12 modal-body modal-body-class bg-white ">
+                    <div class="modal-window-full-card-product ">
+                        <div class="container a">
+                            <div class=" col-lg-6 d-flex flex-wrap justify-content-between">
+                                <img class="col-6 col-sm-4 col-lg-5 p-1" src="" height="114" width="162"/>
+                                <div class="col-6 col-lg-7 p-0 align-items-center">
+                                    <p class="modal-window-full-product-title font-weight-bold">Sun</p>
+                                    <div class="modal-window-full-product-price-block">
+                                        <p class="modal-window-full-product-price modal-window-full-product-price-through text-left ">$350.00</p>
+                                        <p id="actualPrice" class="modal-window-full-product-price modal-window-full-product-price-actually text-center font-weight-bold">$250.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 d-flex align-items-center modal-total-quantity-and-sum pt-3">
+                                <div class="modal-window-full-product-quantity-block">
+                                    <p class="modal-window-full-product-quantity align-middle mr-1 mt-2 mb-0">Quantity:</p>
+                                    <div class="modal-window-full-card-count-block d-flex">
+                                        <p id="quantity" class="modal-window-full-card-count text-center mr-2 border border-dark  mb-0">
+                                            2</p>
+                                        <p id="minusItem" class="modal-window-full-card-count-minus text-center mr-2 font-weight-bold border mb-0 border-dark">
+                                              -</p>
+                                        <p id="plusItem" class="modal-window-full-card-count-plus text-center font-weight-bold mb-0">+</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="modal-window-full-product-price modal-window-full-card-sum text-center  p-0">
+                                        Sum</p>
+                                    <p class="modal-window-full-product-price modal-window-full-card-general-sum font-weight-bold text-center p-0">
+                                        $250</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <p class=" text-right my-3 ">Total:$1000</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary text-uppercase btn-modal-continue"
+                                data-dismiss="modal"><i class="fa fal fa-angle-right mr-2"></i>continue
+                        </button>
+                        <button type="button" class="btn btn-info btn-modal-buy text-uppercase text-white"><i
+                                class="fa far fa-shopping-basket mr-2"></i>Buy now
+                        </button>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./src/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
-            <a class="col-4 d-flex justify-content-center"><img src="./src/images/logos/logo.png" alt="logo image"></a>
+            <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./dist/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
+            <a class="col-4 d-flex justify-content-center"><img src="./dist/images/logos/logo.png" alt="logo image"></a>
             <div class="cart col-4 d-flex justify-content-end">
                 <a href="#" class="cart d-flex align-items-center justify-content-end" data-toggle="modal" data-target="#exampleModal">
-                    <img class="rounded" src="./src/images/logos/card_icon.png">
+                    <img class="rounded" src="./dist/images/logos/card_icon.png">
                     <div id="cardCountItem" class="my-card-items-count rounded-circle bg-dark text-white">0</div>
                 </a>
             </div>
