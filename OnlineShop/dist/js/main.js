@@ -3632,16 +3632,25 @@ $(function () {
 });
 //CART
 $(function () {
+
 	$(".btn-basket").on("click", function () {
-		const data = $(this).closest(".card").find(".card-title").text();
+		const data = $(this).closest(".card-body").find(".card-title").text();
         localStorage.setItem("order_item", JSON.stringify(data));
-        const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
-        localStorage.setItem('order_price', JSON.stringify(productPrice));
-        const actualPrice = $(this).closest(".modal-content").find(".modal-product-np").text();
+        // const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
+        // localStorage.setItem('order_price', JSON.stringify(productPrice));
+        const actualPrice = $(this).closest(".card-content").find(".card-content-price").text();
         localStorage.setItem("order_actual", JSON.stringify(actualPrice));     	
-	});
+    });
+    // $(".btn-basket").on("click", function () {
+	// 	const data = $(this).closest(".card-body").find(".card-title").text();
+    //     localStorage.setItem("order_item", JSON.stringify(data));
+    //     const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
+    //     localStorage.setItem('order_price', JSON.stringify(productPrice));
+    //     const actualPrice = $(this).closest(".modal-content").find(".modal-product-np").text();
+    //     localStorage.setItem("order_actual", JSON.stringify(actualPrice));     	
+	// });
 	$(".btn-basket-light").on("click", function () {
-		const data = $(this).closest("").find(".modal-product-title").text();
+		const data = $(this).closest(".modal-body").find(".modal-product-title").text();
         localStorage.setItem("order_item", JSON.stringify(data));
         const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
         localStorage.setItem('order_price', JSON.stringify(productPrice));
