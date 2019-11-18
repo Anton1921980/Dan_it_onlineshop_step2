@@ -15,7 +15,15 @@
 <!-- Section NAVBAR -->
 
 
-<section class="navbar-top">
+<section class="navbar-top"> 
+    <div id="to-top">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+    </div>
+    <div id="home"><a name="top" href="#"></a></div>
     <div class="container">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <ul class="navbar-nav mr-auto">
@@ -166,11 +174,10 @@
 <!-- Section HEADER  -->
 <header class="header">
     <!-- модальное окно пустая корзина -->
-    <div class="modal-wrapper">
+    <!-- <div class="modal-wrapper">
         <div class="modal fade modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content  modal-wrapper-empty">
-
                     <div class="modal-body  modal-body-class-empty">
                         <button class="close p-3 text-white" data-dismiss="modal">×</button>
                         <p class="modal-window-header text-center mb-2">Your cart is empty</p>
@@ -181,20 +188,73 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Модальное окно с товаром -->
-
+    <div class="modal fade modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content modal-wrapper-full">
+                <button class="close p-3 text-white" data-dismiss="modal">×</button>
+                <div class=" col-12 modal-body modal-body-class bg-white ">
+                    <div class="modal-window-full-card-product ">
+                        <div class="container a">
+                            <div class=" col-lg-6 d-flex flex-wrap justify-content-between">
+                                <img class="col-6 col-sm-4 col-lg-5 p-1" src="" height="114" width="162"/>
+                                <div class="col-6 col-lg-7 p-0 align-items-center">
+                                    <p class="modal-window-full-product-title font-weight-bold">Sun</p>
+                                    <div class="modal-window-full-product-price-block">
+                                        <p class="modal-window-full-product-price modal-window-full-product-price-through text-left ">$350.00</p>
+                                        <p id="actualPrice" class="modal-window-full-product-price modal-window-full-product-price-actually text-center font-weight-bold">$250.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 d-flex align-items-center modal-total-quantity-and-sum pt-3">
+                                <div class="modal-window-full-product-quantity-block">
+                                    <p class="modal-window-full-product-quantity align-middle mr-1 mt-2 mb-0">Quantity:</p>
+                                    <div class="modal-window-full-card-count-block d-flex">
+                                        <p id="quantity" class="modal-window-full-card-count text-center mr-2 border border-dark  mb-0">
+                                            2</p>
+                                        <p id="minusItem" class="modal-window-full-card-count-minus text-center mr-2 font-weight-bold border mb-0 border-dark">
+                                              -</p>
+                                        <p id="plusItem" class="modal-window-full-card-count-plus text-center font-weight-bold mb-0">+</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="modal-window-full-product-price modal-window-full-card-sum text-center  p-0">
+                                        Sum</p>
+                                    <p class="modal-window-full-product-price modal-window-full-card-general-sum font-weight-bold text-center p-0">
+                                        $250</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <p class=" text-right my-3 ">Total:$1000</p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary text-uppercase btn-modal-continue"
+                                data-dismiss="modal"><i class="fa fal fa-angle-right mr-2"></i>continue
+                        </button>
+                        <button type="button" class="btn btn-info btn-modal-buy text-uppercase text-white"><i
+                                class="fa far fa-shopping-basket mr-2"></i>Buy now
+                        </button>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./src/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
-            <a class="col-4 d-flex justify-content-center"><img src="./src/images/logos/logo.png" alt="logo image"></a>
+            <div class="phone col-4 d-flex align-items-center"><a><img class="d-none d-md-block mr-2  icon-tel" src="./dist/images/logos/tel_icon.png"><span>2300 - 3560 - 222</span></a></div>
+            <a class="col-4 d-flex justify-content-center"><img src="./dist/images/logos/logo.png" alt="logo image"></a>
             <div class="cart col-4 d-flex justify-content-end">
                 <a href="#" class="cart d-flex align-items-center justify-content-end" data-toggle="modal" data-target="#exampleModal">
-                    <img class="rounded" src="./src/images/logos/card_icon.png">
-                    <div id="cardCountItem" class="my-card-items-count rounded-circle bg-dark text-white">1</div>
+                    <img class="rounded" src="./dist/images/logos/card_icon.png">
+                    <div id="cardCountItem" class="my-card-items-count rounded-circle bg-dark text-white">0</div>
                 </a>
-
             </div>
         </div>
     </div>
@@ -214,8 +274,7 @@
             </form>
 
             <!-- Toggler/collapsibe Button -->
-            <div class="navbar-toggler mb-4"  data-toggle="collapse" data-target="#collapsibleNavbar">
-                <!-- <span class="navbar-toggler-icon"></span> -->
+            <div class="navbar-toggler mb-4"  data-toggle="collapse" data-target="#collapsibleNavbar">                
                 <span></span>
                 <span></span>
                 <span></span>
@@ -271,10 +330,10 @@
 
                 <div class="carousel-item active">
 
-                    <img src="./src/images/top-slider/1.jpg" class="d-block w-100" alt="...">
+                    <img src="./dist/images/top-slider/1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./src/images/top-slider/2.jpg" class="d-block w-100" alt="...">
+                    <img src="./dist/images/top-slider/2.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <div class="controls">
@@ -1030,23 +1089,23 @@
                         <div class="tab-pane fade show active" id="featured" role="tabpanel"
                             aria-labelledby="featured-tab">
                             <div class="review-container active" data-set="1">
-                                <img class="avatar"  data-whatever="10" src="./src/images/gallery/10.png"
+                                <img class="avatar"  data-whatever="10" src="./dist/images/gallery/10.png"
                                      alt="gallery-image">
                             </div>
                             <div class="review-container" data-set="2">
-                                <img class="avatar" data-whatever="11" src="./src/images/gallery/11.png"
+                                <img class="avatar" data-whatever="11" src="./dist/images/gallery/11.png"
                                      alt="gallery-image">
                             </div>
                             <div class="review-container" data-set="3">
-                                <img class="avatar" data-whatever="12" src="./src/images/gallery/12.png"
+                                <img class="avatar" data-whatever="12" src="./dist/images/gallery/12.png"
                                      alt="gallery-image">
                             </div>
                             <div class="review-container" data-set="4">
-                                <img class="avatar" data-whatever="13" src="./src/images/gallery/13.png"
+                                <img class="avatar" data-whatever="13" src="./dist/images/gallery/13.png"
                                      alt="gallery-image">
                             </div>
                             <div class="review-container" data-set="5">
-                                <img class="avatar" data-whatever="14" src="./src/images/gallery/14.png"
+                                <img class="avatar" data-whatever="14" src="./dist/images/gallery/14.png"
                                      alt="gallery-image">
                             </div>
                             <div class="bottom-slider  w-100">
@@ -1054,15 +1113,15 @@
                               <div class="row">
                                 <div class="wrapper-slider d-flex row-no-wrap">
                                     <button class="btn-left"> <i class="fas fa-chevron-left arrow"></i> </button>
-                                    <img class="img-slider col-2 zoom" data-set="1" src="./src/images/gallery/10.png"
+                                    <img class="img-slider col-2 zoom" data-set="1" src="./dist/images/gallery/10.png"
                                         alt="gallery-image">
-                                    <img class="img-slider col-2" data-set="2" src="./src/images/gallery/11.png"
+                                    <img class="img-slider col-2" data-set="2" src="./dist/images/gallery/11.png"
                                         alt="gallery-image">
-                                    <img class="img-slider col-2" data-set="3" src="./src/images/gallery/12.png"
+                                    <img class="img-slider col-2" data-set="3" src="./dist/images/gallery/12.png"
                                         alt="gallery-image">
-                                    <img class="img-slider col-2" data-set="4" src="./src/images/gallery/13.png"
+                                    <img class="img-slider col-2" data-set="4" src="./dist/images/gallery/13.png"
                                         alt="gallery-image">
-                                    <img class="img-slider col-2" data-set="5" src="./src/images/gallery/14.png"
+                                    <img class="img-slider col-2" data-set="5" src="./dist/images/gallery/14.png"
                                         alt="gallery-image">
                                     <button class="btn-right next"> <i class="fas fa-chevron-right arrow"></i>
                                     </button>
@@ -1088,11 +1147,11 @@
                       <div class="gallery-right  d-none d-lg-block  border h-100">
                         <div class=" flex-column px-5">
                             <div class="py-5">
-                                <span class="from py-2">FROM<span class="fromPrice">$50.80</span></span>
-                                <div class="badroom py-2">Badroom Bed</div>
-                                <button type="button" class="btn button-shop py-2">shop now</button>
+                                <span class="from py-2">FROM</span><span class="fromPrice">$50.80</span>
+                                <div class="bedroom py-2">Bedroom Bed</div>
+                                <button class="btn button-shop py-2">shop now</button>
                             </div>
-                            <img src="./src/images/product/bed.png" alt="" class="py-2 w-100">
+                            <img src="./dist/images/product/bed.png" alt="" class="py-2 w-100">
                         </div>
     
                       </div>
@@ -1100,7 +1159,7 @@
                   </div> 
             
         </div>
-
+</div>
 </section>
 <section class="blog">
 	<div class="container">
