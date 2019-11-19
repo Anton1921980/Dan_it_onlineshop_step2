@@ -199,7 +199,7 @@
                     <div class="modal-window-full-card-product ">
                         <div class="container a">
                             <div class=" col-lg-6 d-flex flex-wrap justify-content-between">
-                                <img class="col-6 col-sm-4 col-lg-5 p-1" src="" height="114" width="162"/>
+                                <div class="modal-window-full-product-img-basket col-6 col-sm-4 col-lg-5 p-1" ></div>
                                 <div class="col-6 col-lg-7 p-0 align-items-center">
                                     <p class="modal-window-full-product-title font-weight-bold">Sun</p>
                                     <div class="modal-window-full-product-price-block">
@@ -469,7 +469,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="1">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -503,7 +504,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="2">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -538,7 +540,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="3">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -572,7 +575,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="4">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -606,7 +610,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="5">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -640,7 +645,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="6">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -674,7 +680,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="7">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -708,7 +715,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="8">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -742,7 +750,8 @@
 										<a href="#" type="button" class="btn btn-prod-details"
 										   data-toggle="modal"
 										   data-target="#productModal" data-whatever="9">Quick View</a>
-										<a href="#" class="btn btn-basket"><i
+										<a href="#" class="btn btn-basket" data-toggle="modal"
+										   data-target="#exampleModal"><i
 												class="fas fa-shopping-basket"></i> add to
 											cart</a>
 										<div class="products-icon-sale">sale</div>
@@ -810,7 +819,8 @@
 											</div>
 											<hr class="modal-product-hr">
 											<div>
-												<a href="#" class="btn btn-basket-light"><i
+												<a href="#" class="btn btn-basket-light" data-toggle="modal"
+												   data-target="#exampleModal"><i
 														class="fas fa-shopping-basket"></i> add to
 													cart
 												</a>
@@ -1034,7 +1044,9 @@
                     <a href="#"  id="galleryQV" data-view="tooltip" data-toggle="modal" data-target="#productModal"  data-placement="right"
                        title="Quick view"><i
                             class="fas fa-eye border border-dark p-2 mb-1 ml-2"></i></a>
-                    <a href="#" data-view="tooltip" data-placement="right" title="Add to cart"><i
+                    <a class="addList-basket" href="#" data-view="tooltip" data-placement="right" title="Add to cart"
+                       data-toggle="modal"
+                       data-target="#exampleModal"><i
                             class="fas fa-shopping-basket border border-dark p-2 mb-1 ml-2"></i></a>
                 </div>
 
@@ -1042,7 +1054,7 @@
 
                     <div class="price  rounded-circle bg-secondary  px-2 py-4">
                         <div class="price-now h4 text-white">&#36;120.00</div>
-                        <div class="price-now h6 text-white"><s>&#36;160.00</s></div>
+                        <div class="price-old h6 text-white"><s>&#36;160.00</s></div>
                     </div>
                     <div class="main-info bg-light">
                         <div class="triangle-topleft"></div>
