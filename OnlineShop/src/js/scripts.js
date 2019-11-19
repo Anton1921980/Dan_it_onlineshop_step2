@@ -1,36 +1,72 @@
 //CART
 $(function () {
 
-	$(".btn-basket").on("click", function () {
-		const data = $(this).closest(".card-body").find(".card-title").text();
-        localStorage.setItem("order_item", JSON.stringify(data));
-        // const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
-        // localStorage.setItem('order_price', JSON.stringify(productPrice));
-        const actualPrice = $(this).closest(".card-content").find(".card-content-price").text();
-        localStorage.setItem("order_actual", JSON.stringify(actualPrice));     	
+	$("body").on("click", ".btn-basket", function () {
+        const modal =  $(this).data("target");
+		const title = $(this).closest(".card").find(".card-title").text();
+		const price = $(this).closest(".card").find(".card-content-price").text();
+        const img = $(this).closest(".card").find(".products-img").css("background-image");
+		$(modal).find(".modal-window-full-product-title").text(title);
+        $(modal).find(".modal-window-full-product-price-through").text(price);
+        $(modal).find(".modal-window-full-product-price-actually").text(price);
+        $(modal).find(".modal-window-full-product-img-basket").css("background-image", `${img}`);
+        const order = {};
+        order.title = title;
+        order.oldPrice = price;
+        order.newPrice = price;
+        order.img = img;
+        localStorage.setItem("order", JSON.stringify(order));
+
     });
-    // $(".btn-basket").on("click", function () {
-	// 	const data = $(this).closest(".card-body").find(".card-title").text();
-    //     localStorage.setItem("order_item", JSON.stringify(data));
-    //     const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
-    //     localStorage.setItem('order_price', JSON.stringify(productPrice));
-    //     const actualPrice = $(this).closest(".modal-content").find(".modal-product-np").text();
-    //     localStorage.setItem("order_actual", JSON.stringify(actualPrice));     	
-	// });
-	$(".btn-basket-light").on("click", function () {
-		const data = $(this).closest(".modal-body").find(".modal-product-title").text();
-        localStorage.setItem("order_item", JSON.stringify(data));
-        const productPrice = $(this).closest(".modal-content").find(".modal-product-op").text();  
-        localStorage.setItem('order_price', JSON.stringify(productPrice));
-        const actualPrice = $(this).closest(".modal-content").find(".modal-product-np").text();
-        localStorage.setItem("order_actual", JSON.stringify(actualPrice));
+
+	$("body").on("click", ".btn-basket-light", function () {
+        const modal =  $(this).data("target");
+        const title = $(this).closest(".modal-content").find(".modal-product-title").text();
+        const oldPrice = $(this).closest(".modal-content").find(".modal-product-op").text();
+        const newPrice = $(this).closest(".modal-content").find(".modal-product-np").text();
+        const img = $(this).closest(".modal-content").find(".modal-product-img").css("background-image");
+        $(modal).find(".modal-window-full-product-title").text(title);
+        $(modal).find(".modal-window-full-product-price-through").text(oldPrice);
+        $(modal).find(".modal-window-full-product-price-actually").text(newPrice);
+        $(modal).find(".modal-window-full-product-img-basket").css("background-image", `${img}`);
+
+        const order = {};
+        order.title = title;
+        order.oldPrice = oldPrice;
+        order.newPrice = newPrice;
+        order.img = img;
+        localStorage.setItem("order", JSON.stringify(order));
+    });
+
+	$(".addList-basket").on("click", function () {
+        const modal =  $(this).data("target");
+        const title = $(this).closest(".gallery").find(".rate-goods").text();
+        const oldPrice = $(this).closest(".gallery").find(".price-old").text();
+        const newPrice = $(this).closest(".gallery").find(".price-now").text();
+        const imgName = $(this).closest(".gallery").find(".review-container.active img").attr("src");
+        const img = `url(`+`${imgName}`+`)`;
+        $(modal).find(".modal-window-full-product-title").text(title);
+        $(modal).find(".modal-window-full-product-price-through").text(oldPrice);
+        $(modal).find(".modal-window-full-product-price-actually").text(newPrice);
+        $(modal).find(".modal-window-full-product-img-basket").css("background-image", `${img}`);
+
+        const order = {};
+        order.title = title;
+        order.oldPrice = oldPrice;
+        order.newPrice = newPrice;
+        order.img = img;
+        localStorage.setItem("order", JSON.stringify(order));
+
     });
    
 $(document).ready(function(){
     $(".cart").on("click", function () {
-    $('.modal-window-full-product-title').html(JSON.parse(localStorage.getItem('order_item')));
-    $('.modal-window-full-product-price').html(JSON.parse(localStorage.getItem('order_price')));
-    $('.modal-window-full-product-price-actually').html(JSON.parse(localStorage.getItem('order_actual')));     
+        const modal =  $(this).data("target");
+        const order = JSON.parse(localStorage.getItem('order'));
+        $(modal).find(".modal-window-full-product-title").text(order.title);
+        $(modal).find(".modal-window-full-product-price-through").text(order.oldPrice);
+        $(modal).find(".modal-window-full-product-price-actually").text(order.newPrice);
+        $(modal).find(".modal-window-full-product-img-basket").css("background-image", `${order.img}`);
   });
  });
 });
