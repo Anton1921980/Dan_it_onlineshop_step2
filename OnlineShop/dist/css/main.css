@@ -45,11 +45,6 @@ table {
 .header {
   background-color: #363636;
   height: 145px; }
-  .header .close {
-    background-color: #2A2A2A;
-    position: relative;
-    bottom: 16px;
-    left: 16px; }
   .header .modal-window-header {
     font-size: larger;
     font-weight: bold;
@@ -102,52 +97,60 @@ table {
   text-align: center;
   line-height: 25px; }
 
+.modal-window-full-card-product {
+  border: 1px solid #cecece;
+  border-radius: 5px; }
+
 .modal-window-full-product-quantity {
   color: #1a1a1a;
   font-size: 14px;
-  height: 37px; }
+  height: 37px;
+  line-height: 37px; }
 
 .modal-window-full-card-count {
   width: 73px;
   height: 37px;
-  padding: 5px; }
+  line-height: 37px; }
 
 .modal-window-full-card-count-minus {
   width: 40px;
   height: 37px;
-  padding: 5px; }
+  line-height: 33px; }
 
 .modal-window-full-card-count-plus {
   width: 40px;
   height: 37px;
   color: #d58e32;
   border: 1px solid #d58e32;
-  padding: 5px; }
+  line-height: 37px; }
 
 .modal-window-full-card-sum {
   color: #cecece;
   height: 22px;
-  margin-top: -28px; }
+  margin-left: auto; }
 
 .modal-window-full-card-general-sum {
-  font-size: 16px;
-  height: 22px; }
+  font-size: 20px;
+  font-weight: bold;
+  height: 37px;
+  line-height: 37px;
+  margin-left: auto; }
 
 .modal-window-full-product-title {
   font-size: 20px; }
 
 .modal-window-full-product-price {
-  width: 104px;
   height: 36px;
-  padding: 5px;
   box-sizing: border-box;
   margin: 0;
-  font-size: 15px; }
+  margin-top: 27px; }
 
 .modal-window-full-product-price-through {
   text-decoration: line-through;
   color: #cecece;
-  padding: 8px; }
+  padding: 8px;
+  padding-left: 0px;
+  font-size: 20px; }
 
 .modal-window-full-product-price-actually {
   width: 104px;
@@ -155,7 +158,8 @@ table {
   color: white;
   box-sizing: border-box;
   background-color: #1a1a1a;
-  font-size: 18px; }
+  font-size: 20px;
+  line-height: 37px; }
 
 .modal-window-full-product-img-basket {
   width: 162px;
@@ -164,6 +168,16 @@ table {
   background-position: center;
   background-repeat: no-repeat;
   background-position: center; }
+
+.btn-modal-continue {
+  background-color: #939393 !important; }
+  .btn-modal-continue .fa-angle-right:before {
+    position: relative;
+    right: 5px; }
+
+.total {
+  font-size: 20px;
+  font-weight: 200; }
 
 .footer {
   width: 100%;
